@@ -1,0 +1,5 @@
+TowerDefence/Temp/*
+*.sln
+*.suo
+*.csproj
+TowerDefence/Library/*
