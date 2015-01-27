@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class start_button_press : MonoBehaviour {
-
+public class ButtonPress : MonoBehaviour {
+	public string level_to_load;
 	public Sprite button;
 	public Sprite button_down;
 
@@ -13,6 +13,6 @@ public class start_button_press : MonoBehaviour {
 		gameObject.GetComponent<SpriteRenderer> ().sprite = button;
 	}
 	void OnMouseDown(){
-		Application.LoadLevel ("Level1");
+		Application.LoadLevel (level_to_load);
 	}
 }
