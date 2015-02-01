@@ -1,28 +1,33 @@
 ﻿#pragma strict
-var CurrentShortestObject : Transform;
-
+var CurrentShortestObject: Transform;
+var debugger: Transform;
 
 function Start () {
- transform.LookAt(FindNearest());
+
+FindNearest();
+ transform.LookAt(CurrentShortestObject.transform.position);
+ Debug.Log(debugger.position);
+ Debug.Log(debugger.rotation);
 }
 
 function Update () {
+
 
 }
 
 function FindNearest(){
 
  var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); 
- var CurrentShortestDist = 999999999999;
+ var CurrentShortestDist = 9999;
  
  for (var i = 0 ; i<EnemyFinder.length ; i++){
   var TryingEnemy = EnemyFinder[i].transform.position;
- var TryingDistance = 999999999999999999;
+ var TryingDistance = 99999;
  TryingDistance= Vector3.Distance(TryingEnemy, transform.localPosition);
  	if(TryingDistance<CurrentShortestDist){
-  CurrentShortestObject = TryingEnemy;
+  CurrentShortestObject = EnemyFinder[i].transform;
      CurrentShortestDist=TryingDistance;
+     Debug.Log(CurrentShortestObject);
   }
    }
-   return CurrentShortestObject;
 } 

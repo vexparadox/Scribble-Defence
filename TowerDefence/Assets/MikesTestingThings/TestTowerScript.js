@@ -3,7 +3,7 @@
 public var TowerAmmo:GameObject;
 
 function Start () {
-Shoot();
+//Shoot();
 }
 
 function Update () {
