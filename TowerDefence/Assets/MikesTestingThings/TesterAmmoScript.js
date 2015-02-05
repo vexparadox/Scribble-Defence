@@ -1,6 +1,6 @@
 ﻿#pragma strict
 var CurrentShortestObject: Transform;
-public var bulletspeed = 10f;
+public var bulletspeed = 30f;
 
 function Start () {
 FindNearest();
