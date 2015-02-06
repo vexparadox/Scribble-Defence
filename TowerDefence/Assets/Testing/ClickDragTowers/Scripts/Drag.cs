@@ -38,7 +38,7 @@ public class Drag : MonoBehaviour
 		if (clicked) {
 			//snap to grid functions
 			float snapInverse = 1/snapValue;
-			float x, y, z;
+			float x, y;
 			//round the values to the snap value
 			x = Mathf.Round(transform.position.x * snapInverse)/snapInverse;
 			y = Mathf.Round(transform.position.y * snapInverse)/snapInverse;
