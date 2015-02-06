@@ -8,6 +8,7 @@ var hasShot = false;
 
 
 function Update () {
+findNearest();
 Turn();
 Fire();	
 }
@@ -22,10 +23,8 @@ function Shoot(){
 	 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); // Thanks to http://answers.unity3d.com/questions/654222/make-sprite-look-at-vector2-in-unity-2d-1.html for the lookat alternative
 
  }
- 
- function Fire(){
- if(!hasShot){
- var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
+ function findNearest(){
+  var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
  var CurrentShortestDist = 9999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
  
 	for (var i = 0 ; i<EnemyFinder.length ; i++){
@@ -37,6 +36,10 @@ function Shoot(){
     		 CurrentShortestDist=TryingDistance;
     	}
     }
+ }
+ function Fire(){
+ if(!hasShot){
+
  	if(Range>Vector2.Distance(CurrentShortestObject.transform.position, transform.localPosition)){ //Check if the shortest enemy is in range
 	hasShot=true; //Stop any more shots trying to happen
 	Shoot(); //Actually shoot
