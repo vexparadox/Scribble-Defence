@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Testing/ClickDragTowers/Scripts/Drag.cs">
     <Files>
-      <File FileName="Assets/Testing/ClickDragTowers/Scripts/Drag.cs" Line="33" Column="36" />
+      <File FileName="Assets/Testing/ClickDragTowers/Scripts/Drag.cs" Line="48" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
