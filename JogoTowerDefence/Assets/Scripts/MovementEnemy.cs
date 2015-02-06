@@ -15,21 +15,9 @@ public class MovementEnemy : MonoBehaviour {
 		// Use this for initialization
 		void Start()
 		{
-			Waypoints[0] = GameObject.Find("way1").transform;
-			Waypoints[1] = GameObject.Find("way2").transform;
-			Waypoints[2] = GameObject.Find("way3").transform;
-			Waypoints[3] = GameObject.Find("way4").transform;
-			Waypoints[4] = GameObject.Find("way5").transform;
-			Waypoints[5] = GameObject.Find("way6").transform;
-			Waypoints[6] = GameObject.Find("way7").transform;
-			Waypoints[7] = GameObject.Find("way8").transform;
-			Waypoints[8] = GameObject.Find("way9").transform;
-			Waypoints[9] = GameObject.Find("way10").transform;
-			Waypoints[10] = GameObject.Find("way11").transform;
-			Waypoints[11] = GameObject.Find("way12").transform;
-			Waypoints[12] = GameObject.Find("way13").transform;
-			Waypoints[13] = GameObject.Find("way14").transform;
-			Waypoints[14] = GameObject.Find("way15").transform;
+		for (int i = 0; i < Waypoints.Length; i++) {
+			Waypoints[i] = GameObject.Find("way"+(i+1)).transform;
+				}
 		}
 		// Update is called once per frame
 		void Update()
