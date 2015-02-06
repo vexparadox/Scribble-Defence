@@ -31,22 +31,23 @@ public class Drag : MonoBehaviour
 		//apply that to the tower being dragged - this makes the tower follow the mouse
 		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
 		transform.position = curPosition;
+		endPosition = transform.position;
 	}
 
 	void Update(){
 
-		if (clicked) {
-			//snap to grid functions
-			float snapInverse = 1/snapValue;
-			float x, y, z;
-			//round the values to the snap value
-			x = Mathf.Round(transform.position.x * snapInverse)/snapInverse;
-			y = Mathf.Round(transform.position.y * snapInverse)/snapInverse;
-			transform.position = new Vector2(x, y);
-			//get the position of where to apply the new tower
-			//MUST BE USED HERE OR WILL GO WHERE THE MOUSE IS, NOT WHERE THE TOWER IS
-			endPosition = transform.position;
-				}
+		//if (clicked) {
+//			//snap to grid functions
+//			float snapInverse = 1/snapValue;
+//			float x, y, z;
+//			//round the values to the snap value
+//			x = Mathf.Round(transform.position.x * snapInverse)/snapInverse;
+//			y = Mathf.Round(transform.position.y * snapInverse)/snapInverse;
+//			transform.position = new Vector2(x, y);
+//			//get the position of where to apply the new tower
+//			//MUST BE USED HERE OR WILL GO WHERE THE MOUSE IS, NOT WHERE THE TOWER IS
+//			endPosition = transform.position;
+//				}
 	}
 
 	void OnMouseUp(){
