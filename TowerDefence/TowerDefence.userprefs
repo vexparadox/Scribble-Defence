@@ -1,11 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/Towers/Scripts/TestTowerScript.js">
-    <Files>
-      <File FileName="Assets/Prefabs/Towers/Scripts/Drag.cs" Line="33" Column="36" />
-      <File FileName="Assets/Prefabs/Towers/Scripts/TestTowerScript.js" Line="27" Column="61" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

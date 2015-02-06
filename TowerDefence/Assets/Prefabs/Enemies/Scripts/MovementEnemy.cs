@@ -16,10 +16,10 @@ public class MovementEnemy : MonoBehaviour {
 		void Start()
 		{
 		for (int i = 0; i < Waypoints.Length; i++) {
-			Waypoints[i] = GameObject.Find("way"+(i+1)).transform;
+			Waypoints[i] = GameObject.Find("way"+i).transform;
 				}
 		}
-		// Update is called once per frame
+		// Update is called once per fr
 		void Update()
 		{
 			//calculate the distance between current position
@@ -41,7 +41,9 @@ public class MovementEnemy : MonoBehaviour {
 				else
 				{
 					//our enemy will go to the next waypoint
+				if(nextWaypointIndex != Waypoints.Length-1){
 					nextWaypointIndex++;
+				}
 					Debug.Log(nextWaypointIndex);
 					//our simple AI, enemy is looking at the next waypoint
 					transform.LookAt(Waypoints[nextWaypointIndex].position,
