@@ -9,8 +9,10 @@ var hasShot = false;
 
 function Update () {
 findNearest();
+if(CurrentShortestObject!=null){
 Turn();
 Fire();	
+}
 }
 
 function Shoot(){
