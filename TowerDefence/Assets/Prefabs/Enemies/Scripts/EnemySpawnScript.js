@@ -15,7 +15,7 @@ function Start () {
 	gruntWaves = new int[numberOfWaves];
 	for (var i = 0; i < numberOfWaves; i++){
 	//formula can be changed
-		gruntWaves[i] = (i*2)+3;
+		gruntWaves[i] = (i*2)+10;
 	}
 	//spawn the grunts on launch
 	SpawnGrunt();

@@ -1,9 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/Enemies/Scripts/EnemySpawnScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Map/Scripts/GridVisibility.cs">
     <Files>
-      <File FileName="Assets/Prefabs/Enemies/Scripts/EnemySpawnScript.js" Line="20" Column="30" />
-      <File FileName="Assets/Prefabs/Enemies/Scripts/MovementEnemy.cs" Line="36" Column="54" />
+      <File FileName="Assets/Prefabs/Enemies/Scripts/EnemySpawnScript.js" Line="25" Column="38" />
+      <File FileName="Assets/Prefabs/Enemies/Scripts/MovementEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Prefabs/Towers/Scripts/EnemyCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets/Prefabs/Towers/Scripts/TowerScript.js" Line="1" Column="1" />
+      <File FileName="Assets/Map/Scripts/GridVisibility.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
