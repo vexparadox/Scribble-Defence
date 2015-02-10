@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour
 	}
 
 	void Update(){
-
+		//SNAP TO GRID CODE
 		//if (clicked) {
 //			//snap to grid functions
 //			float snapInverse = 1/snapValue;

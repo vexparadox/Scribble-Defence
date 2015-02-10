@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs\Towers\Scripts\TestTowerScript.js" />
-     <Compile Include="Assets\Prefabs\Towers\Scripts\TesterAmmoScript.js" />
-     <Compile Include="Assets\Testing\MikesTestingThings\EnemySpawnScript.js" />
+     <Compile Include="Assets\Prefabs\Enemies\Scripts\EnemySpawnScript.js" />
+     <Compile Include="Assets\Prefabs\Towers\Scripts\AmmoScript.js" />
+     <Compile Include="Assets\Prefabs\Towers\Scripts\TowerScript.js" />
      <Compile Include="Assets\Testing\MikesTestingThings\SelfDestroy.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

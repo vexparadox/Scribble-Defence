@@ -9,10 +9,10 @@ var hasShot = false;
 
 function Update () {
 findNearest();
-if(CurrentShortestObject!=null){
-Turn();
-Fire();	
-}
+	if(CurrentShortestObject!=null){
+		Turn();
+		Fire();	
+	}
 }
 
 function Shoot(){
@@ -26,8 +26,8 @@ function Shoot(){
 
  }
  function findNearest(){
-  var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
- var CurrentShortestDist = 9999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
+ 	var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
+ 	var CurrentShortestDist = 9999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
  
 	for (var i = 0 ; i<EnemyFinder.length ; i++){
   	var TryingEnemy = EnemyFinder[i].transform.position;
@@ -40,13 +40,12 @@ function Shoot(){
     }
  }
  function Fire(){
- if(!hasShot){
-
- 	if(Range>Vector2.Distance(CurrentShortestObject.transform.position, transform.localPosition)){ //Check if the shortest enemy is in range
-	hasShot=true; //Stop any more shots trying to happen
-	Shoot(); //Actually shoot
-	yield WaitForSeconds(Reload);//Wait until it has reloaded
-	hasShot=false; // Allow shooitng again
-	}
+ 	if(!hasShot){
+ 		if(Range>Vector2.Distance(CurrentShortestObject.transform.position, transform.localPosition)){ //Check if the shortest enemy is in range
+			hasShot=true; //Stop any more shots trying to happen
+			Shoot(); //Actually shoot
+			yield WaitForSeconds(Reload);//Wait until it has reloaded
+			hasShot=false; // Allow shooitng again
+		}
 	}
 } 
