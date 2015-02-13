@@ -25,6 +25,7 @@ private var currentSpeedyCount = 0;
 private var roundOver: boolean = false;
 private var currentWave = 0; //the current wave we're on
 
+
 function Start () {
 	gruntsPerWave = new int[numberOfWaves];
 	tanksPerWave = new int[numberOfWaves];
@@ -46,24 +47,20 @@ function Spawn(){
 	while(!roundOver){
 	var rndChance = parseInt(Random.Range(0,2));
 	
-	switch(rndChance){
-	case 0:
+	if(rndChance == 0){
 		if(currentGruntCount<gruntsPerWave[currentWave]){
 			var newGruntEnemy:GameObject;
 			newGruntEnemy = Instantiate(gruntEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
 			newGruntEnemy.transform.parent = enemyParentObject.transform;
 			currentGruntCount++;
-		}
-	break;
-	case 1:
+		} else { rndChance++; }
+	} else if(rndChance == 1){
 		if(currentTankCount<tanksPerWave[currentWave]){
 			var newTankEnemy:GameObject;
 			newTankEnemy = Instantiate(tankEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
 			newTankEnemy.transform.parent = enemyParentObject.transform;
 			currentTankCount++;
 		}
-	break;
-	 
 	}
 	yield WaitForSeconds(timeBetweenEnemies);
 }
