@@ -1,5 +1,7 @@
 TowerDefence/Library/
 *.csproj
+*.sln
+*.userprefs
 TowerDefence/Library/guidmapper
 
 TowerDefence/Library/CurrentLayout.dwlt
