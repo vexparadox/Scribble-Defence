@@ -6,10 +6,10 @@ function Start () {
 }
 
 function Update () {
-dai();
+//dai();
 }
 
-function dai(){
-_GM.Money4Days.deadGrunt();
-Destroy();
-}
+//function dai(){
+//_GM.Money4Days.deadGrunt();
+//Destroy();
+//}

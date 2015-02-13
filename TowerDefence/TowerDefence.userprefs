@@ -1,16 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/Towers/Scripts/Drag.cs">
     <Files>
-      <File FileName="Assets/Prefabs/Towers/Scripts/Drag.cs" Line="17" Column="14" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Testing\MikesTestingThings\DeadMoney.js">
-    <Files>
-      <File FileName="Assets\Testing\MikesTestingThings\Money4Days.js" Line="10" Column="1" />
-      <File FileName="Assets\Testing\MikesTestingThings\DeadMoney.js" Line="16" Column="1" />
->>>>>>> eb7670bff92da6563610113b465dd1933e148f83
+      <File FileName="Assets/Prefabs/Towers/Scripts/Drag.cs" Line="32" Column="63" />
+      <File FileName="Assets/Map/Scripts/AssetController.js" Line="4" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
