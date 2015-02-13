@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BoxCollider))]
-
 public class Drag : MonoBehaviour 
 {
 	private Vector3 startPoint;
