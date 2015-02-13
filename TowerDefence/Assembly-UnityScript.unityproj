@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Map\Scripts\AssetController.js" />
      <Compile Include="Assets\Prefabs\Enemies\Scripts\EnemySpawnScript.js" />
      <Compile Include="Assets\Prefabs\Towers\Scripts\AmmoScript.js" />
      <Compile Include="Assets\Prefabs\Towers\Scripts\TowerScript.js" />

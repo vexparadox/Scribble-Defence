@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Drag : MonoBehaviour 
-{
+{	
+	public GameObject grid;
 	private Vector3 startPoint;
 	private Vector3 screenPoint;
 	private Vector3 offset;
@@ -13,6 +14,7 @@ public class Drag : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		grid.renderer.enabled = true;
 		//get the screen relative point and make note of the start position of the tower
 		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 		startPoint = gameObject.transform.position;
@@ -23,7 +25,8 @@ public class Drag : MonoBehaviour
 	}
 	
 	void OnMouseDrag()
-	{
+	{	
+
 		//get the current screen position mouse
 		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 		//apply that to the tower being dragged - this makes the tower follow the mouse
@@ -49,6 +52,7 @@ public class Drag : MonoBehaviour
 	}
 
 	void OnMouseUp(){
+		grid.renderer.enabled = false;
 		//create object
 		clicked = false;
 		transform.position = startPoint;
