@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/text.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu\Scripts\PlayClick.cs">
     <Files>
-      <File FileName="Assets/text.js" Line="1" Column="1" />
+      <File FileName="Assets\MainMenu\Scripts\PlayClick.cs" Line="5" Column="15" />
+      <File FileName="Assets\Prefabs\Towers\Scripts\Drag.cs" Line="20" Column="36" />
+      <File FileName="Assets\Prefabs\Towers\Scripts\EnemyCollider.cs" Line="6" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
