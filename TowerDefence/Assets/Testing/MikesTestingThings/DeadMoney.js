@@ -1,15 +1,14 @@
 ﻿#pragma strict
-public var _GM:GameObject;
+var _GM:GameObject;
 
 function Start () {
-
+_GM = GameObject.Find("_GM");
 }
 
 function Update () {
 //dai();
 }
 
-//function dai(){
-//_GM.Money4Days.deadGrunt();
-//Destroy();
-//}
+function dai(){
+_GM.SendMessage("deadGrunt");
+}
