@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Bullet
   - GM
+  - Tower
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -52,4 +53,8 @@ TagManager:
   - name: Enemy
     userID: 1
     uniqueID: 1841270903
+    locked: 0
+  - name: Tower
+    userID: 3
+    uniqueID: 3106171697
     locked: 0

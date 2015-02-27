@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Map/Scripts/BaseScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/Towers/Scripts/Drag.cs">
     <Files>
-      <File FileName="Assets/Map/Scripts/BaseScript.cs" Line="31" Column="3" />
+      <File FileName="Assets/Prefabs/Enemies/Scripts/HealthScript.cs" Line="18" Column="14" />
+      <File FileName="Assets/Prefabs/Towers/Scripts/Drag.cs" Line="54" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

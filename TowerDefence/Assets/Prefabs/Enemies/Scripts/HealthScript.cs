@@ -1,15 +1,21 @@
-﻿public int maxHealth;
+﻿using UnityEngine;
+using System.Collections;
+
+
+public class HealthScript : MonoBehaviour{
+public int maxHealth;
 private int health;
 public float dmgInterval;
 private bool cd;
 
 public int Health
 {
-	get { return health; }
+	get { 
+		return health; 
+	}
 	set
 	{
-		health = value;
-		//healthBarController();
+		Health = value;
 	}
 }
 
@@ -44,4 +50,5 @@ void OnTriggerEnter2D(Collider2D other)
 		}
 	}
 	
+}
 }
