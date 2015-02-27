@@ -4,16 +4,23 @@
 	private var health:int;
 	public var dmgInterval:int; //holds the wait between taking damage
 	private var cd = false;
+	
+	//currency addition
+	//public var nameOfEnemy:string;
+	private var _GM:GameObject;
 
 function Start () {
 		cd = false;
 		health = maxHealth;
+		//find the game master
+		_GM = GameObject.Find("_GM");
 }
 
 function Update () {
 //if he's dead, kill him
 		if (health < 1) {
 			Destroy(gameObject);
+			//_GM.SendMessage("dead"+nameOfEnemy);
 		}
 }
 
