@@ -622,9 +622,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 5315232}
   toSpawn: {fileID: 152012, guid: 177c11dd20b0d448e85a08f5f3067875, type: 2}
-  leastDistance: 0
-  closerBase: 0
-  basePosition: {fileID: 0}
   bases:
   - {fileID: 0}
   - {fileID: 0}

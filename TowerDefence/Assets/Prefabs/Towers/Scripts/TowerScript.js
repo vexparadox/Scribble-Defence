@@ -16,8 +16,8 @@ findNearest();
 }
 
 function Shoot(){
- Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
- }
+ 	Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
+}
  
  function Turn(){
      var dir = CurrentShortestObject.transform.position - transform.position; // See Below
