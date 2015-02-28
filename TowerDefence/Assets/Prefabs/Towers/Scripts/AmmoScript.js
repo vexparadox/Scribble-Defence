@@ -1,6 +1,7 @@
 #pragma strict
 var CurrentShortestObject: Transform;
 public var bulletspeed = 30f;
+private var onscreen = renderer.isVisible;
 
 function Start () {
 FindNearest();
@@ -14,7 +15,10 @@ FindNearest();
  }
 
 function Update () {
-
+	onscreen = renderer.isVisible;
+	if(!onscreen){
+	Destroy(gameObject);
+	}
 
 }
 
