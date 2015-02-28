@@ -123,7 +123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296781248}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &17630245
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,8 +616,8 @@ Transform:
   - {fileID: 1758590432}
   - {fileID: 1319817747}
   - {fileID: 123681713}
-  - {fileID: 1915877594}
   - {fileID: 5315234}
+  - {fileID: 1915877594}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &334729298
@@ -808,7 +808,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 581226432}
-  - {fileID: 635254552}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &531989515
@@ -1087,69 +1086,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1563817487}
   m_RootOrder: 2
---- !u!1 &635254550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 635254552}
-  - 108: {fileID: 635254551}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &635254551
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 635254550}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .5
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &635254552
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 635254550}
-  m_LocalRotation: {x: .408217967, y: -.234569743, z: .109381683, w: .875426114}
-  m_LocalPosition: {x: 4.21999979, y: 1.95000005, z: -16.6900005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 516678132}
-  m_RootOrder: 1
 --- !u!1 &638682519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,7 +2666,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 296781248}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!95 &1915877595
 Animator:
   serializedVersion: 3
