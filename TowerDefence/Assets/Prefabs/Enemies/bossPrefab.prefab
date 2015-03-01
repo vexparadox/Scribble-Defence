@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 436688}
   - 212: {fileID: 21236688}
   - 95: {fileID: 9536688}
-  - 114: {fileID: 11487448}
   m_Layer: 0
   m_Name: bossPrefab
   m_TagString: Enemy
@@ -45,18 +44,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11487448
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4037558b8b571b44cae74a08785ad9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _GM: {fileID: 0}
 --- !u!212 &21236688
 SpriteRenderer:
   m_ObjectHideFlags: 1

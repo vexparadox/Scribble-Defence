@@ -13,7 +13,6 @@ GameObject:
   - 114: {fileID: 11487084}
   - 60: {fileID: 6015902}
   - 114: {fileID: 11406520}
-  - 114: {fileID: 11413060}
   m_Layer: 0
   m_Name: tankPrefab
   m_TagString: Enemy
@@ -109,19 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 80
-  dmgInterval: 2
---- !u!114 &11413060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4037558b8b571b44cae74a08785ad9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _GM: {fileID: 0}
+  dmgInterval: 1
 --- !u!114 &11487084
 MonoBehaviour:
   m_ObjectHideFlags: 1

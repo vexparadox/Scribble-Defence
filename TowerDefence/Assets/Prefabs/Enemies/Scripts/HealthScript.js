@@ -2,7 +2,7 @@
 
 	public var maxHealth:int; //holds the maximum health it can have
 	private var health:int;
-	public var dmgInterval:int; //holds the wait between taking damage
+	public var dmgInterval:float; //holds the wait between taking damage
 	private var cd = false;
 	
 	//currency addition
