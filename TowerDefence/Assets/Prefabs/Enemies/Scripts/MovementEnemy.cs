@@ -6,9 +6,17 @@ public class MovementEnemy : MonoBehaviour {
 	private int nextWaypointIndex = 0;
 	public float Speed = 1f;
 	public Transform[] Waypoints = new Transform[9];
+	//get the Lives GM
+	private LivesScript GM;
 	// Use this for initialization
 	void Start()
 	{
+
+		//find the GM
+		GameObject Temp;
+		Temp = GameObject.Find ("_GM");
+		GM = Temp.GetComponent<LivesScript> ();
+
 		for (int i = 0; i < Waypoints.Length; i++) {
 			Waypoints[i] = GameObject.Find("way"+i).transform;
 		}
@@ -18,13 +26,12 @@ public class MovementEnemy : MonoBehaviour {
 	{
 		//calculate the distance between current position
 		//and the target waypoint
-		
 		if (Vector2.Distance(transform.position, Waypoints[nextWaypointIndex].position) < 0.01f) {
 			//is this waypoint the last one?
-			if (nextWaypointIndex == Waypoints.Length)
+			if (nextWaypointIndex+1 == Waypoints.Length)
 			{
-				//RemoveAndDestroy();
-				//GameManager.Instance.Lives--;
+				Destroy(gameObject); //remove the object
+				GM.TakeALife();//take a life away
 				transform.position = Vector2.MoveTowards(transform.position, Waypoints[nextWaypointIndex].position, Time.deltaTime * Speed);
 			} else
 			{
@@ -32,10 +39,6 @@ public class MovementEnemy : MonoBehaviour {
 				if (nextWaypointIndex != Waypoints.Length-1) {
 					nextWaypointIndex++;
 				}
-				/* REMOVED BECUASE IT WAS ROTATING THE ENEMY TO LOOK AT THE WAYPOINTS
-         transform.LookAt(Waypoints[nextWaypointIndex].position, -Vector3.forward);
-         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
-         */
 			}
 		}
 		//enemy is moved towards the next waypoint

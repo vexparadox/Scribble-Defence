@@ -268,11 +268,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 123681713}
   - 212: {fileID: 123681712}
-  - 60: {fileID: 123681715}
-  - 114: {fileID: 123681714}
   m_Layer: 8
   m_Name: cookiejar
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,49 +309,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 296781248}
   m_RootOrder: 2
---- !u!114 &123681714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 123681711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa82f84e4e608a341a97b1edf295b7e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!60 &123681715
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 123681711}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: .610000014, y: -.730000019}
-      - {x: .689999998, y: -.629999995}
-      - {x: .74000001, y: -.469999999}
-      - {x: .74000001, y: -.349999994}
-      - {x: .730000019, y: -.270000011}
-      - {x: .689999998, y: -.189999998}
-      - {x: .649999976, y: -.0399999991}
-      - {x: .519999981, y: .119999997}
-      - {x: .389999986, y: .150000006}
-      - {x: .300000012, y: .159999996}
-      - {x: .0700000003, y: .159999996}
-      - {x: -.00999999978, y: .109999999}
-      - {x: -.0399999991, y: .0399999991}
-      - {x: -.129999995, y: -.0500000007}
-      - {x: -.219999999, y: -.230000004}
-      - {x: -.219999999, y: -.430000007}
-      - {x: -.200000003, y: -.600000024}
-      - {x: -.0799999982, y: -.75}
-      - {x: .0399999991, y: -.769999981}
-      - {x: .379999995, y: -.769999981}
-      - {x: .439999998, y: -.75999999}
 --- !u!1 &126854498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1170,7 @@ GameObject:
   - 114: {fileID: 638682524}
   m_Layer: 0
   m_Name: _GM
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

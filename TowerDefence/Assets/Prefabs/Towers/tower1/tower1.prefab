@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5847508}
   m_Layer: 0
   m_Name: tower1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
   toSpawn: {fileID: 152012, guid: 177c11dd20b0d448e85a08f5f3067875, type: 2}
-  snapValue: 10
+  bases:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  baseStatus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  TowerID: 0
 --- !u!212 &21237178
 SpriteRenderer:
   m_ObjectHideFlags: 1
