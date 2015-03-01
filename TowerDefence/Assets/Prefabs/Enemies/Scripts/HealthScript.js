@@ -1,13 +1,21 @@
 ﻿#pragma strict
 
 	public var maxHealth:int; //holds the maximum health it can have
-	private var health:int;
+	private var health:int; // holds current health, this changes throughout
 	public var dmgInterval:float; //holds the wait between taking damage
-	private var cd = false;
+	private var cd = false; //whether the cool down is active or not
+	
+	
+	//holds the enemy's ID
+	/*
+	0 = grunt
+	1 = tank
+	2 = speedy
+	3 = boss
+	*/
 	public var enemyID: int;
 	
-	//currency addition
-	//public var nameOfEnemy:string;
+	//Reference to the game master
 	private var _GM:GameObject;
 
 function Start () {

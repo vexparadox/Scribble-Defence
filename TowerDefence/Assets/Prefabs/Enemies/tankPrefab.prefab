@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   dmgInterval: 1
-  nameOfEnemy: Tank
+  enemyID: 1
 --- !u!114 &11487084
 MonoBehaviour:
   m_ObjectHideFlags: 1

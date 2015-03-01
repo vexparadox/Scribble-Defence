@@ -19,6 +19,12 @@ public class Drag : MonoBehaviour
 	//holds the position and status of that base
 	public Transform[] bases = new Transform[20];
 	public int[] baseStatus = new int[20];
+	//used to identify the tower you've picked up
+	//tower 1 = 0, tower 2 = 1 etc..
+	public int TowerID;
+
+	//Reference to the game master
+	private CurrencyScript GM;
 
 
 	void Start(){
@@ -30,6 +36,11 @@ public class Drag : MonoBehaviour
 		for (int i=0; i<bases.Length; i++) {
 			baseStatus[i] = 0;
 		}
+
+		//find the GM
+		GameObject Temp;
+		Temp = GameObject.Find ("_GM");
+		GM = Temp.GetComponent<CurrencyScript> ();
 	}
 
 	void OnMouseDown()
@@ -78,7 +89,7 @@ public class Drag : MonoBehaviour
 		grid.renderer.enabled = false; //disable the grid showing
 		transform.position = startPoint; // ping the tower back to it's UI start position
 		//make sure it's actually on a base before placing
-		if (snapped) {
+		if (snapped && GM.CanAfford(TowerID)) {
 			baseStatus [closerBase] = 1; //mark the base as occupied
 			Instantiate (toSpawn, endPosition, Quaternion.identity); //create an object at that point
 			snapped = false; // flip the snapped variable
