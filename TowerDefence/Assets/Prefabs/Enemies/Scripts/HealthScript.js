@@ -4,6 +4,7 @@
 	private var health:int;
 	public var dmgInterval:float; //holds the wait between taking damage
 	private var cd = false;
+	public var nameOfEnemy: String;
 	
 	//currency addition
 	//public var nameOfEnemy:string;
@@ -20,7 +21,7 @@ function Update () {
 //if he's dead, kill him
 		if (health < 1) {
 			Destroy(gameObject);
-			//_GM.SendMessage("dead"+nameOfEnemy);
+			_GM.SendMessage("enemyDead", nameOfEnemy);
 		}
 }
 

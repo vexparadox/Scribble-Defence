@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   dmgInterval: .5
+  nameOfEnemy: Grunt
 --- !u!114 &11479812
 MonoBehaviour:
   m_ObjectHideFlags: 1
