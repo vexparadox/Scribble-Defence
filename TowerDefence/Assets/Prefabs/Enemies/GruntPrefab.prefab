@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   dmgInterval: .5
-  nameOfEnemy: Grunt
+  enemyID: 0
 --- !u!114 &11479812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,8 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf70f93cad1540e586124a60ea68709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 5
   Waypoints:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
