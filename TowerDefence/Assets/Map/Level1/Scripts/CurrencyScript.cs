@@ -7,12 +7,14 @@ public class CurrencyScript : MonoBehaviour {
 	public int StartCurrency; // this is the start currency of the level
 
 	public int GruntWorth, TankWorth, SpeedyWorth, BossWorth; // this is how much the user gets for each enemy kill
-	public int Tower1Cost, Tower2Cost, Tower3Cost, Tower4Cost; // this is how much each tower costs to place
-	public Text CurrencyLabel; // this is the Text object that holds the currecny label
+	public int[] TowerCost = new int[4]; // this is how much each tower costs to place, element 0 = tower 1 etc.
+ 	public Text CurrencyLabel; // this is the Text object that holds the currecny label
+	public Text[] TowerCostLabel = new Text[4];
 
 	void Start(){
 		CurrentCurrency = StartCurrency; //assign the start currency
-		UpdateTextUI(); // update the TextUI to the current currency
+		UpdateTextCookiesUI(); // update the TextUI to the current currency
+		UpdateTextTowerCost ();
 	}
 
 	void enemyDead(string EnemyName){
@@ -29,11 +31,26 @@ public class CurrencyScript : MonoBehaviour {
 		} else if (EnemyName == "Boss") {
 			CurrentCurrency += BossWorth;
 		}
-		UpdateTextUI(); // update the TextUI to the current currency
+		UpdateTextCookiesUI(); // update the TextUI to the current currency
 	}
 
-	void UpdateTextUI(){
+	void UpdateTextCookiesUI(){
 		// update the TextUI to the current currency
 		CurrencyLabel.text = "Cookies: " + CurrentCurrency;
+	}
+
+	void UpdateTextTowerCost(){
+		GameObject temp = null; 
+		//find all the towerCost Text Objects
+		for (int i =0; i < TowerCostLabel.Length; i++) {
+			temp = GameObject.Find("TowerCost"+(i+1));
+			//get the Text Component from the Temp object
+			TowerCostLabel[i] = temp.GetComponent<Text>();
+			}
+		//assign the tower cost labels to their costs
+		for (int i =0; i < TowerCostLabel.Length; i++) {
+			TowerCostLabel[i].text = TowerCost[i] + " Cookies";
+			}
+		temp = null;
 	}
 }

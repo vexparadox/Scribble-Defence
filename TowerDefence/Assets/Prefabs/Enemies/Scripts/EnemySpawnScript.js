@@ -64,30 +64,5 @@ function Spawn(){
 	}
 	yield WaitForSeconds(timeBetweenEnemies);
 }
-	/*
-	
-	while(currentGruntCount<gruntsPerWave[currentWave]){
-		var newGruntEnemy:GameObject;
-		newGruntEnemy = Instantiate(gruntEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
-		newGruntEnemy.transform.parent = enemyParentObject.transform;
-		currentGruntCount++;
- 		yield WaitForSeconds(timeBetweenEnemies);
-	}
-	//spawn tanks
-	while(currentTankCount<tanksPerWave[currentWave]){
-		var newTankEnemy:GameObject;
-		newTankEnemy = Instantiate(tankEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
-		newTankEnemy.transform.parent = enemyParentObject.transform;
-		currentTankCount++;
-		yield WaitForSeconds(timeBetweenEnemies);
-}
-	/spawn speedys
-	while(currentSpeedyAmount<speedyPerWave[currentWave]){
-		var newEnemy:GameObject;
-		newEnemy = Instantiate(gruntEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
-		newEnemy.transform.parent = enemyParentObject.transform;
-		currentGruntAmount++;
-	}*/
-	
 
 }
