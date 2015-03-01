@@ -1229,10 +1229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentCurrency: 0
   StartCurrency: 200
-  GruntWorth: 10
-  TankWorth: 20
-  SpeedyWorth: 0
-  BossWorth: 0
+  EnemyWorth: 0a000000140000000000000000000000
   TowerCost: 0a000000140000001e00000028000000
   CurrencyLabel: {fileID: 1116105969}
   TowerCostLabel:
