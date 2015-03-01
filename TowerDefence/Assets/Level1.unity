@@ -1192,7 +1192,7 @@ MonoBehaviour:
   tankEnemyPrefab: {fileID: 122266, guid: eadd57d4eade9407b9d312856938be9b, type: 2}
   bossEnemyPrefab: {fileID: 136688, guid: bd8532cf789924a98962f70baa7969b7, type: 2}
   speedEnemyPrefab: {fileID: 0}
-  timeBetweenEnemies: 2
+  timeBetweenEnemies: 1
   numberOfWaves: 1
 --- !u!4 &638682521
 Transform:

@@ -33,36 +33,52 @@ function Start () {
 	
 	for(var i = 0; i < numberOfWaves; i++){
 		if(i == 0){
-			gruntsPerWave[i] = 5;
+			gruntsPerWave[i] = 10;
 		} else{
-			gruntsPerWave[i] = i*5;
+			gruntsPerWave[i] = i*6;
 		}
-		tanksPerWave[i] = 5;
-		speedyPerWave[i] = i;
+		tanksPerWave[i] = 2;
+		speedyPerWave[i] = i*2;
 	}
 	Spawn();
 }
 
-function Spawn(){
-	while(!roundOver){
-	var rndChance = parseInt(Random.Range(0,2));
-	
-	if(rndChance == 0){
-		if(currentGruntCount<gruntsPerWave[currentWave]){
-			var newGruntEnemy:GameObject;
-			newGruntEnemy = Instantiate(gruntEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
-			newGruntEnemy.transform.parent = enemyParentObject.transform;
-			currentGruntCount++;
-		} else { rndChance++; }
-	} else if(rndChance == 1){
-		if(currentTankCount<tanksPerWave[currentWave]){
-			var newTankEnemy:GameObject;
-			newTankEnemy = Instantiate(tankEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
-			newTankEnemy.transform.parent = enemyParentObject.transform;
-			currentTankCount++;
-		}
+function Update(){
+	if(currentGruntCount==gruntsPerWave[currentWave] && currentTankCount==tanksPerWave[currentWave]){
+		roundOver = true;
 	}
-	yield WaitForSeconds(timeBetweenEnemies);
 }
 
+function Spawn(){
+	while(!roundOver){
+	var rndChance = parseInt(Random.Range(0,100))+20;
+	if(rndChance > 50){
+		if(currentGruntCount<gruntsPerWave[currentWave]){
+			SpawnGrunt(); //if there's grunts left to play, do it
+		} else if(currentTankCount<tanksPerWave[currentWave]){
+					SpawnTank(); // if there's not any more, play a tank (if there's any left)
+				} 
+	} else if(rndChance < 50){
+		if(currentTankCount<tanksPerWave[currentWave]){
+			SpawnTank(); //if there's tanks left to play do it
+		} else if(currentGruntCount<gruntsPerWave[currentWave]){
+			SpawnGrunt(); //else if not, play a grunt instead (if there's any left)
+			}
+	}
+	yield WaitForSeconds(timeBetweenEnemies);
+	}
+}
+
+function SpawnGrunt(){
+		var newGruntEnemy:GameObject;
+		newGruntEnemy = Instantiate(gruntEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
+		newGruntEnemy.transform.parent = enemyParentObject.transform;
+		currentGruntCount++;
+}
+
+function SpawnTank(){
+		var newTankEnemy:GameObject;
+		newTankEnemy = Instantiate(tankEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
+		newTankEnemy.transform.parent = enemyParentObject.transform;
+		currentTankCount++;
 }
