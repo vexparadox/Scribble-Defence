@@ -29,6 +29,7 @@ function Update () {
 //if he's dead, kill him
 		if (health < 1) {
 			Destroy(gameObject);
+			_GM.SendMessage("deadCash", enemyID);
 			_GM.SendMessage("enemyDead", enemyID);
 		}
 }

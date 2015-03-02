@@ -1193,7 +1193,10 @@ MonoBehaviour:
   bossEnemyPrefab: {fileID: 136688, guid: bd8532cf789924a98962f70baa7969b7, type: 2}
   speedEnemyPrefab: {fileID: 0}
   timeBetweenEnemies: 1
-  numberOfWaves: 1
+  timeBetweenWaves: 5
+  numberOfWaves: 5
+  currentEnemyCount: 00000000000000000000000000000000
+  currentWave: 0
 --- !u!4 &638682521
 Transform:
   m_ObjectHideFlags: 0
@@ -1230,7 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentCurrency: 0
-  StartCurrency: 150
+  StartCurrency: 500
   EnemyWorth: 0a000000140000002800000064000000
   TowerCost: 320000004b0000006400000096000000
   CurrencyLabel: {fileID: 1116105969}

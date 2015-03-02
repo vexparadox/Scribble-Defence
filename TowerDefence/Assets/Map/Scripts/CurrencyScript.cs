@@ -23,7 +23,7 @@ public class CurrencyScript : MonoBehaviour {
 		UpdateTextTowerCost ();
 	}
 
-	void enemyDead(int EnemyID){
+	void deadCash(int EnemyID){
 		//depending on what enemy is killed, add their worth to the currency
 		//enemy worth is defined publically in the _GM game object
 		CurrentCurrency += EnemyWorth[EnemyID]; 

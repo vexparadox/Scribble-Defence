@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Prefabs\Enemies\Scripts\MovementEnemy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/Enemies/Scripts/EnemySpawnScript.js">
     <Files>
-      <File FileName="Assets\Map\Scripts\LiveLoseScript.cs" Line="7" Column="2" />
-      <File FileName="Assets\Prefabs\Towers\Scripts\Drag.cs" Line="1" Column="1" />
-      <File FileName="Assets\Prefabs\Enemies\Scripts\HealthScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Map\Scripts\LivesScript.cs" Line="19" Column="19" />
-      <File FileName="Assets\Map\Scripts\CurrencyScript.cs" Line="2" Column="21" />
-      <File FileName="Assets\Prefabs\Enemies\Scripts\MovementEnemy.cs" Line="25" Column="15" />
+      <File FileName="Assets/Map/Scripts/AssetController.js" Line="1" Column="1" />
+      <File FileName="Assets/Prefabs/Enemies/Scripts/EnemySpawnScript.js" Line="113" Column="3" />
+      <File FileName="Assets/Prefabs/Enemies/Scripts/HealthScript.js" Line="1" Column="1" />
+      <File FileName="Assets/Map/Scripts/CurrencyScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
