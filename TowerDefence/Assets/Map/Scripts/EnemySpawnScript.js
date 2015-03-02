@@ -1,8 +1,7 @@
 ﻿#pragma strict
-//We can either have a different script for each enemy type, or have multiple functions in one script both of these are fine
-/*
-These 2D arrays hold [waveNumber][perWave];
-*/
+import UnityEngine.UI;
+
+//holds the amount of enemies per[wave]
 private var gruntsPerWave: int[];
 private var tanksPerWave: int[];
 private var speedyPerWave: int[];
@@ -19,8 +18,11 @@ public var timeBetweenEnemies: int; //hold the respawn time between enemies
 public var timeBetweenWaves: int; //holds the time between waves
 public var numberOfWaves: int; // this is the number of waves that will occur
 
+public var waveTextLabel: Text; // holds the Current Wave
+private var totalEnemiesThisWave: int; // holds the maximum enemies in this wave
 
-public var currentEnemyCount:int[] = new int[4]; // holds how many enemyies are alive
+
+private var currentEnemyCount:int[] = new int[4]; // holds how many enemyies are alive
 	//this 0,1,2,3 system is used throught the system
 	/*
 	0 = grunt
@@ -47,8 +49,11 @@ function Start () {
 			tanksPerWave[i] = i*3;
 		}
 	}
-	yield WaitForSeconds(timeBetweenWaves);
-	Spawn();
+	waveTextLabel.text = "Wave: Deployment"
+	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
+	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get the total enemies this wave
+	Spawn();//start the spawning on first wave
+	updateUI();
 }
 
 function Update(){
@@ -92,34 +97,29 @@ function SpawnTank(){
 }
 
 //function takes enemy death and marks it
-function enemyDead(enemyID){
-	currentEnemyCount[enemyID]--; //take an enemy away depending on the ID
+function enemyDead(){
+	totalEnemiesThisWave--; //take an enemy away depending on the ID
 }
 
-
-//boolean function returns if all enemies are dead or not
-function allDead(){
-	var currentEmpty:int; // this holds how many types of enemies are dead
-	for( var i:int = 0; i < currentEnemyCount.Length; i++){
-		if(currentEnemyCount[i] == 0){
-			currentEmpty = 0; //mark this one as empty
-		}
-	 } 
-	 
-	if (currentEmpty == 0){
-		return true; //if they're all empty (dead) return true
-	} else{
-		return false;
-	}
-}
 
 function checkForRoundEnd(){
 //if all are dead and there're are none to spawn
-	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && allDead){
+	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && totalEnemiesThisWave == 0){
 		roundOver = true; // stop more spawning
 		currentWave++; //advance a wave
+		totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get new total enemies
+		//wipe current enemy array, this allows more spawning
+		for (var i =0; i < currentEnemyCount.length; i++){
+			currentEnemyCount[i] = 0;
+		}
 		yield WaitForSeconds(timeBetweenWaves); //wait for time before waves
 		roundOver = false; // start spawning again 
 		Spawn(); //call spawn
+		updateUI();
 	}
+}
+
+function updateUI(){
+	waveTextLabel.text = "Wave: " + (currentWave+1); // set wave text label
+
 }

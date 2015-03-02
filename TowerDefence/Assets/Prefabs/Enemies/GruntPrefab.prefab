@@ -194,8 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8586e344c84f84986beb4c6a874c73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
-  dmgInterval: .5
+  maxHealth: 60
   enemyID: 0
 --- !u!114 &11479812
 MonoBehaviour:
