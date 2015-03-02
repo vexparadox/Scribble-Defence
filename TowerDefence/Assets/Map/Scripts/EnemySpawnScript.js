@@ -49,7 +49,7 @@ function Start () {
 			tanksPerWave[i] = i*3;
 		}
 	}
-	waveTextLabel.text = "Wave: Deployment"
+	waveTextLabel.text = "Wave: Deployment";
 	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
 	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get the total enemies this wave
 	Spawn();//start the spawning on first wave
