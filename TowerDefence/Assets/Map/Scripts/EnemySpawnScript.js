@@ -49,7 +49,7 @@ function Start () {
 			tanksPerWave[i] = i*3;
 		}
 	}
-	waveTextLabel.text = "Wave: Deployment";
+	waveTextLabel.text = "Deploy towers!";
 	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
 	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get the total enemies this wave
 	Spawn();//start the spawning on first wave
@@ -106,6 +106,7 @@ function checkForRoundEnd(){
 //if all are dead and there're are none to spawn
 	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && totalEnemiesThisWave == 0){
 		roundOver = true; // stop more spawning
+		if (currentWave != numberOfWaves){ // if it's the last wave
 		currentWave++; //advance a wave
 		totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get new total enemies
 		//wipe current enemy array, this allows more spawning
@@ -116,10 +117,13 @@ function checkForRoundEnd(){
 		roundOver = false; // start spawning again 
 		Spawn(); //call spawn
 		updateUI();
+		} else{
+			Debug.Log("You won the level, yay!");
+		}
 	}
 }
 
 function updateUI(){
-	waveTextLabel.text = "Wave: " + (currentWave+1); // set wave text label
+	waveTextLabel.text = "Wave: " + (currentWave+1) + "/" +numberOfWaves; // set wave text label
 
 }

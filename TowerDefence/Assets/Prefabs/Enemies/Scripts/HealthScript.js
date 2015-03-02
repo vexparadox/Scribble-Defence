@@ -1,5 +1,5 @@
 ﻿#pragma strict
-	import UnityEngine.UI;
+
 	public var maxHealth:int; //holds the maximum health it can have
 	private var health:int; // holds current health, this changes throughout
 	
