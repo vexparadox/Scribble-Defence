@@ -4,7 +4,8 @@ import UnityEngine.UI;
 //holds the amount of enemies per[wave]
 private var gruntsPerWave: int[];
 private var tanksPerWave: int[];
-private var speedyPerWave: int[];
+private var speedPerWave: int[];
+private var bossPerWave: int[];
 
 public var enemyParentObject:GameObject; // this is what all enemies will be a child of
 public var SpawnPoint:Transform; // this is the spawn point of all the enemies
@@ -39,7 +40,7 @@ function Start () {
 	//initialse arrays of amounts of enemies
 	gruntsPerWave = new int[numberOfWaves];
 	tanksPerWave = new int[numberOfWaves];
-	speedyPerWave = new int[numberOfWaves];
+	speedPerWave = new int[numberOfWaves];
 	
 	//find the game master
 	_GM = GameObject.Find("_GM");
@@ -47,16 +48,25 @@ function Start () {
 	//fill arrays with the amount of enemies per wave
 	for(var i = 0; i < numberOfWaves; i++){
 		if(i == 0){
+			//on first wave have 10 grunts, 2 tanks and no speedys
 			gruntsPerWave[i] = 10;
 			tanksPerWave[i] = 2;
+			speedPerWave[i] = 0;
 		} else{
-			gruntsPerWave[i] = i*6;
-			tanksPerWave[i] = i*3;
+			//each time increase number of enemies
+			gruntsPerWave[i] = i*5;
+			tanksPerWave[i] = i*2;
+			speedPerWave[i] = i*2;
 		}
+		
+		if(i == numberOfWaves){
+			bossPerWave[i] = 5;
+		}
+	
 	}
 	waveTextLabel.text = "Deploy towers!";
 	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
-	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get the total enemies this wave
+	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get the total enemies this wave
 	Spawn();//start the spawning on first wave
 	updateUI();
 }
@@ -67,19 +77,25 @@ function Update(){
 
 function Spawn(){
 	while(!roundOver){
-	var rndChance = parseInt(Random.Range(0,100))+20;
-	if(rndChance > 50){
+	var rndChance2 = parseInt(Random.Range(0,100)); // used for deciding tank or speedy
+	var rndChance = parseInt(Random.Range(0,100))+20; //used for deciding grunt or tank/speedy
+	if(rndChance > 50){ //if it's a grunt, spawn it
 		if(currentEnemyCount[0]<gruntsPerWave[currentWave]){
 			SpawnGrunt(); //if there's grunts left to play, do it
 		} else if(currentEnemyCount[1]<tanksPerWave[currentWave]){
 					SpawnTank(); // if there's not any more, play a tank (if there's any left)
 				} 
-	} else if(rndChance < 50){
-		if(currentEnemyCount[1]<tanksPerWave[currentWave]){
-			SpawnTank(); //if there's tanks left to play do it
-		} else if(currentEnemyCount[0]<gruntsPerWave[currentWave]){
-			SpawnGrunt(); //else if not, play a grunt instead (if there's any left)
-			}
+	} else if(rndChance < 50){ //if it's not a grunt spawn a speedy/tank
+		//if(rndChance2 >50){
+			//spawn speedy
+		//}else{
+			//spawn tank
+			if(currentEnemyCount[1]<tanksPerWave[currentWave]){
+				SpawnTank(); //if there's tanks left to play do it
+			} else if(currentEnemyCount[0]<gruntsPerWave[currentWave]){
+				SpawnGrunt(); //else if not, play a grunt instead (if there's any left)
+				}
+		//}
 	}
 	yield WaitForSeconds(timeBetweenEnemies); //wait for time before enemies
 	}
@@ -101,6 +117,26 @@ function SpawnTank(){
 		currentEnemyCount[1]++; //add one to the tally
 }
 
+/*
+function SpawnSpeed(){
+		var newEnemy:GameObject;
+		//create the enemy game object
+		newEnemy = Instantiate(speedEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
+		newEnemy.transform.parent = enemyParentObject.transform; // put into enemy paretn
+		currentEnemyCount[2]++; //add one to the tally
+}
+
+function SpawnBoss(){
+		var newEnemy:GameObject;
+		//create the enemy game object
+		newEnemy = Instantiate(bossEnemyPrefab, Vector2(SpawnPoint.position.x, SpawnPoint.position.y), Quaternion.identity);
+		newEnemy.transform.parent = enemyParentObject.transform; // put into enemy paretn
+		currentEnemyCount[3]++; //add one to the tally
+}
+
+
+*/
+
 //function takes enemy death and marks it
 function enemyDead(){
 	totalEnemiesThisWave--; //take an enemy away depending on the ID
@@ -112,8 +148,8 @@ function checkForRoundEnd(){
 	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && totalEnemiesThisWave == 0){
 		roundOver = true; // stop more spawning
 		if (currentWave != numberOfWaves){ // if it's the last wave
-		currentWave++; //advance a wave
-		totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedyPerWave[currentWave]; //get new total enemies
+			currentWave++; //advance a wave
+			totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get new total enemies
 		//wipe current enemy array, this allows more spawning
 		for (var i =0; i < currentEnemyCount.length; i++){
 			currentEnemyCount[i] = 0;
