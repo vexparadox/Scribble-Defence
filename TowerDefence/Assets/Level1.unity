@@ -1053,7 +1053,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.55550706
+  m_Radius: 2.00178313
   m_Center: {x: 1.90734863e-06, y: -9.53674316e-07}
 --- !u!212 &581226429
 SpriteRenderer:
@@ -2441,6 +2441,10 @@ Prefab:
       propertyPath: GM
       value: 
       objectReference: {fileID: 638682523}
+    - target: {fileID: 5847508, guid: 89ab2a21497174647be0a8fd1f569871, type: 2}
+      propertyPath: m_Radius
+      value: 2.00178313
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89ab2a21497174647be0a8fd1f569871, type: 2}
   m_RootGameObject: {fileID: 581226427}
