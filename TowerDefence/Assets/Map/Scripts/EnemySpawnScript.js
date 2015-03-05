@@ -70,7 +70,7 @@ function Start () {
 			bossPerWave[i] = 0;
 		}
 	}
-	waveTextLabel.text = "Deploy towers!";
+	waveTextLabel.text = "Place now!";
 	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
 	totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get the total enemies this wave
 	Spawn();//start the spawning on first wave
