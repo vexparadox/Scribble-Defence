@@ -41,19 +41,4 @@ public class LivesScript : MonoBehaviour {
 		gameOver = true;
 		endMessage = "You did it yay!";
 	}
-	
-	void OnGUI(){
-		//GUI.Window(Rect((Screen.width/2),(Screen.height/2), 60,40), "The End!");
-		//GUI.Label(Rect((Screen.width/2),(Screen.height/2)-15,1,1), ""+endMessage);
-		//GUI broken, I think this might be the JS version
-//		if(GUI.Button(new Rect((Screen.width/2), (Screen.height/2), 50, 15), "Back to the menu"));
-//		{
-//				Application.LoadLevel("MainMenu");
-//		}
-//		if(GUI.Button(new Rect((Screen.width/2)+15, (Screen.height/2)+15,50,15), "Restart"));
-//		{
-//				Application.LoadLevel(Application.loadedLevelName);
-//		}
-	}
-
 }

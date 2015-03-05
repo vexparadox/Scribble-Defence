@@ -11,14 +11,13 @@
 	3 = boss
 	*/
 	public var enemyID: int;
-	
 	//Reference to the game master
 	private var _GM:GameObject;
 
 function Start () {
-		health = maxHealth;
-		//find the game master
-		_GM = GameObject.Find("_GM");
+	health = maxHealth;
+	//find the game master
+	_GM = GameObject.Find("_GM");
 }
 
 function Update () {
@@ -36,8 +35,10 @@ function OnCollisionEnter2D(collider: Collision2D)
 		{
 			Destroy(collider.gameObject); // destroy the bullet on contact
 			if (health > 1)
-			{
-				health -= 20; //take damage
+			{	
+				var ammo : AmmoScript; //get the ammoScript attached to the offending bullet
+				ammo = collider.gameObject.GetComponent(AmmoScript); // get the component
+				health -= ammo.attackDamage; //take the set amount of damage away from the health
 			}
 		}
 		

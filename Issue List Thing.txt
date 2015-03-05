@@ -1,11 +1,13 @@
 Things to remember to do! Yes notepad formating is amazing
 //I can't spell
+
+**means completed**
 -----------------------------
 
 Enemies and Towers
 ------
 Enemies to cause differing amount of lives to be taken (base 1 atm)
-Different towers to give different ammo that causes differing damage (base 20 atm)
+**Different towers to give different ammo that causes differing damage**
 Figure out that damn AOE tower, all the others are variable changes
 Add other enemies into spawn script, shouldn't take long.. just need to tweak the random algorithim
 
