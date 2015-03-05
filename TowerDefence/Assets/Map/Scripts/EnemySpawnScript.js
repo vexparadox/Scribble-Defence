@@ -55,17 +55,20 @@ function Start () {
 			speedPerWave[i] = 0;
 		} else{
 			//each time increase number of enemies
-			gruntsPerWave[i] = i*5;
-			tanksPerWave[i] = i*2;
+			gruntsPerWave[i] = i*6;
+			tanksPerWave[i] = i*3;
 			speedPerWave[i] = 0; // 0 to keep the waves advancing
 		}
 		
-		if(i == numberOfWaves-1){
-			bossPerWave[i] = 1;
-		}else{
+		if(i >= 3){
+			if(i == numberOfWaves-1){
+				bossPerWave[i] = 2; //2 bosses on last wave
+			}else{ 
+				bossPerWave[i] = 1; //one on everything after 2nd wave
+			}
+		} else{
 			bossPerWave[i] = 0;
 		}
-	
 	}
 	waveTextLabel.text = "Deploy towers!";
 	yield WaitForSeconds(timeBetweenWaves*2); //wait for the first one, double time on first one
@@ -100,6 +103,15 @@ function Spawn(){
 				}
 		//}
 	}
+	
+	//if they're all spawned, spawn the bosses
+	if(currentEnemyCount[0] >= gruntsPerWave[currentWave]
+	 && currentEnemyCount[1] >= tanksPerWave[currentWave] 
+	 && currentEnemyCount[2] >= speedPerWave[currentWave]
+	 && currentEnemyCount[3] < bossPerWave[currentWave]){
+		SpawnBoss();
+	}
+	
 	yield WaitForSeconds(timeBetweenEnemies); //wait for time before enemies
 	}
 }
@@ -128,7 +140,7 @@ function SpawnSpeed(){
 		newEnemy.transform.parent = enemyParentObject.transform; // put into enemy paretn
 		currentEnemyCount[2]++; //add one to the tally
 }
-
+*/
 function SpawnBoss(){
 		var newEnemy:GameObject;
 		//create the enemy game object
@@ -138,7 +150,7 @@ function SpawnBoss(){
 }
 
 
-*/
+
 
 //function takes enemy death and marks it
 function enemyDead(){
@@ -147,21 +159,26 @@ function enemyDead(){
 
 
 function checkForRoundEnd(){
-//if all are dead and there're are none to spawn
-	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && totalEnemiesThisWave == 0){
+//if all are dead and there're are none to spawn && they're all dead
+	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && 
+	currentEnemyCount[1]==tanksPerWave[currentWave] && 
+	currentEnemyCount[2] == speedPerWave[currentWave] &&
+	currentEnemyCount[3] == bossPerWave[currentWave] && 
+	totalEnemiesThisWave == 0){
+	
 		roundOver = true; // stop more spawning
 		if (currentWave != numberOfWaves){ // if it's not the last wave
 			currentWave++; //advance a wave
 			totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get new total enemies
-		//wipe current enemy array, this allows more spawning
-		for (var i =0; i < currentEnemyCount.length; i++){
-			currentEnemyCount[i] = 0;
-		}
-		yield WaitForSeconds(timeBetweenWaves); //wait for time before waves
-		roundOver = false; // start spawning again 
-		Spawn(); //call spawn
-		updateUI();
-		Debug.Log("New wave");
+			//wipe current enemy array, this allows more spawning
+			for (var i =0; i < currentEnemyCount.length; i++){
+				currentEnemyCount[i] = 0;
+			}
+			yield WaitForSeconds(timeBetweenWaves); //wait for time before waves
+			roundOver = false; // start spawning again 
+			Spawn(); //call spawn
+			updateUI();
+			Debug.Log("New wave");
 		} else{
 			_GM.SendMessage("levelWon");
 		}
