@@ -41,6 +41,7 @@ function Start () {
 	gruntsPerWave = new int[numberOfWaves];
 	tanksPerWave = new int[numberOfWaves];
 	speedPerWave = new int[numberOfWaves];
+	bossPerWave = new int[numberOfWaves];
 	
 	//find the game master
 	_GM = GameObject.Find("_GM");
@@ -56,11 +57,13 @@ function Start () {
 			//each time increase number of enemies
 			gruntsPerWave[i] = i*5;
 			tanksPerWave[i] = i*2;
-			speedPerWave[i] = i*2;
+			speedPerWave[i] = 0; // 0 to keep the waves advancing
 		}
 		
-		if(i == numberOfWaves){
-			bossPerWave[i] = 5;
+		if(i == numberOfWaves-1){
+			bossPerWave[i] = 1;
+		}else{
+			bossPerWave[i] = 0;
 		}
 	
 	}
@@ -147,7 +150,7 @@ function checkForRoundEnd(){
 //if all are dead and there're are none to spawn
 	if(currentEnemyCount[0]==gruntsPerWave[currentWave] && currentEnemyCount[1]==tanksPerWave[currentWave] && totalEnemiesThisWave == 0){
 		roundOver = true; // stop more spawning
-		if (currentWave != numberOfWaves){ // if it's the last wave
+		if (currentWave != numberOfWaves){ // if it's not the last wave
 			currentWave++; //advance a wave
 			totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get new total enemies
 		//wipe current enemy array, this allows more spawning
@@ -158,6 +161,7 @@ function checkForRoundEnd(){
 		roundOver = false; // start spawning again 
 		Spawn(); //call spawn
 		updateUI();
+		Debug.Log("New wave");
 		} else{
 			_GM.SendMessage("levelWon");
 		}
