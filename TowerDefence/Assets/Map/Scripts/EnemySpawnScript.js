@@ -20,7 +20,7 @@ public var numberOfWaves: int; // this is the number of waves that will occur
 
 public var waveTextLabel: Text; // holds the Current Wave
 private var totalEnemiesThisWave: int; // holds the maximum enemies in this wave
-
+private var _GM: GameObject;
 
 private var currentEnemyCount:int[] = new int[4]; // holds how many enemyies are alive
 	//this 0,1,2,3 system is used throught the system
@@ -36,10 +36,15 @@ public var currentWave = 0; //the current wave we're on
 
 
 function Start () {
+	//initialse arrays of amounts of enemies
 	gruntsPerWave = new int[numberOfWaves];
 	tanksPerWave = new int[numberOfWaves];
 	speedyPerWave = new int[numberOfWaves];
 	
+	//find the game master
+	_GM = GameObject.Find("_GM");
+	
+	//fill arrays with the amount of enemies per wave
 	for(var i = 0; i < numberOfWaves; i++){
 		if(i == 0){
 			gruntsPerWave[i] = 10;
@@ -118,7 +123,7 @@ function checkForRoundEnd(){
 		Spawn(); //call spawn
 		updateUI();
 		} else{
-			Debug.Log("You won the level, yay!");
+			_GM.SendMessage("levelWon");
 		}
 	}
 }

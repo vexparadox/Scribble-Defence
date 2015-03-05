@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Map/Scripts/EnemySpawnScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Map\Scripts\LivesScript.cs">
     <Files>
-      <File FileName="Assets/Map/Scripts/EnemySpawnScript.js" Line="50" Column="4" />
-      <File FileName="Assets/Prefabs/Enemies/Scripts/HealthScript.js" Line="2" Column="1" />
-      <File FileName="Assets/Map/Scripts/CurrencyScript.cs" Line="2" Column="22" />
+      <File FileName="Assets\Map\Scripts\LivesScript.cs" Line="45" Column="5" />
+      <File FileName="Assets\Map\Scripts\EnemySpawnScript.js" Line="51" Column="21" />
+      <File FileName="Assets\Prefabs\Enemies\Scripts\HealthScript.js" Line="44" Column="3" />
+      <File FileName="Assets\Map\Scripts\CurrencyScript.cs" Line="64" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

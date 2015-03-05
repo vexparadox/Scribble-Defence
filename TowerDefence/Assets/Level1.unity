@@ -1322,6 +1322,7 @@ MonoBehaviour:
   StartLives: 15
   CurrentLives: 0
   LivesLabel: {fileID: 915353533}
+  gameOver: 0
 --- !u!1 &669973989
 GameObject:
   m_ObjectHideFlags: 0
