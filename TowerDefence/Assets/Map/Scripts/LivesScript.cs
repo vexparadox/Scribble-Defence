@@ -15,7 +15,7 @@ public class LivesScript : MonoBehaviour {
 		UpdateLivesUI();
 	}
 	
-	// Update is called once per frame
+	// called from enemy movement when they reach the last waypoint!
 	public void TakeALife(){
 		CurrentLives--;
 		UpdateLivesUI();

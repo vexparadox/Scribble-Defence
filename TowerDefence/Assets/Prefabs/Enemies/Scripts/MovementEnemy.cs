@@ -7,7 +7,9 @@ public class MovementEnemy : MonoBehaviour {
 	public float Speed = 1f;
 	public Transform[] Waypoints = new Transform[9];
 	//get the Lives GM
-	private LivesScript GM;
+	private LivesScript GMLives;
+	//get the Spawn GM
+	private GameObject GMSpawn;
 	// Use this for initialization
 	void Start()
 	{
@@ -15,13 +17,16 @@ public class MovementEnemy : MonoBehaviour {
 		//find the GM
 		GameObject Temp;
 		Temp = GameObject.Find ("_GM");
-		GM = Temp.GetComponent<LivesScript> ();
+		GMLives = Temp.GetComponent<LivesScript> ();
+		GMSpawn = Temp;
 
 		for (int i = 0; i < Waypoints.Length; i++) {
 			Waypoints[i] = GameObject.Find("way"+i).transform;
 		}
+
 	}
-	// Update is called once per fr
+
+	//every frame
 	void Update()
 	{
 		//calculate the distance between current position
@@ -31,7 +36,8 @@ public class MovementEnemy : MonoBehaviour {
 			if (nextWaypointIndex+1 == Waypoints.Length)
 			{
 				Destroy(gameObject); //remove the object
-				GM.TakeALife();//take a life away
+				GMLives.TakeALife();//take a life away
+				GMSpawn.SendMessage("enemyDead"); //mark the enemy as dead in the EnemySpawnScript
 				transform.position = Vector2.MoveTowards(transform.position, Waypoints[nextWaypointIndex].position, Time.deltaTime * Speed);
 			} else
 			{
