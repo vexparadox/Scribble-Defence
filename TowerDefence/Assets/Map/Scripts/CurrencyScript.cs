@@ -33,7 +33,7 @@ public class CurrencyScript : MonoBehaviour {
 
 	void UpdateTextCookiesUI(){
 		// update the TextUI to the current currency
-		CurrencyLabel.text = "Cookies: " + CurrentCurrency;
+		CurrencyLabel.text = CurrentCurrency.ToString();
 	}
 
 	void UpdateTextTowerCost(){
@@ -46,7 +46,7 @@ public class CurrencyScript : MonoBehaviour {
 			}
 		//assign the tower cost labels to their costs
 		for (int i =0; i < TowerCostLabel.Length; i++) {
-			TowerCostLabel[i].text = TowerCost[i] + " Cookies";
+			TowerCostLabel[i].text = TowerCost[i].ToString();
 			}
 		temp = null;
 	}
