@@ -33,7 +33,7 @@ public class LivesScript : MonoBehaviour {
 			gameOver = true;
 			endMessage = "You ran out of lives! :(";
 				}
-		LivesLabel.text = "Lives: " + CurrentLives;
+		LivesLabel.text = CurrentLives.ToString();
 	}
 
 	//passed from EnemySpawnScript.JS
