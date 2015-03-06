@@ -20,10 +20,11 @@ function Shoot(){
 }
  
  function Turn(){
+	 if(Range>Vector2.Distance(CurrentShortestObject.transform.position, transform.localPosition)){
      var dir = CurrentShortestObject.transform.position - transform.position; // See Below
  	 var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90; // See Below
 	 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); // Thanks to http://answers.unity3d.com/questions/654222/make-sprite-look-at-vector2-in-unity-2d-1.html for the lookat alternative
-
+	 }
  }
  function findNearest(){
  	var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
