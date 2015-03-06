@@ -2,7 +2,7 @@
 var CurrentShortestObject: Transform;
 public var TowerAmmo:GameObject;
 public var Range = 90;
-public var Reload = 5;
+public var Reload:float;
 var hasShot = false;
 
 

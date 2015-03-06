@@ -1,56 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &152012
+--- !u!1 &126924
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 452012}
-  - 114: {fileID: 11455448}
-  - 212: {fileID: 21228236}
+  - 4: {fileID: 426924}
+  - 212: {fileID: 21226924}
+  - 114: {fileID: 11449924}
   m_Layer: 0
-  m_Name: tower1Place
+  m_Name: tower3Place
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &452012
+--- !u!4 &426924
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152012}
+  m_GameObject: {fileID: 126924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9000001, y: 3.78999996, z: -5.86999989}
-  m_LocalScale: {x: .247006893, y: .247227907, z: .288817585}
+  m_LocalPosition: {x: -2.80100012, y: 1.574, z: 0}
+  m_LocalScale: {x: .259409696, y: .259409696, z: .259409696}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11455448
+--- !u!114 &11449924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152012}
+  m_GameObject: {fileID: 126924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b14e57a4898884784e99c79020bcd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
-  TowerAmmo: {fileID: 138584, guid: 454d464571e63bb43b11eca1d0fa9826, type: 2}
-  Range: 3
-  Reload: 3
+  TowerAmmo: {fileID: 168856, guid: fca4c846cb3374be297e036a236714e5, type: 2}
+  Range: 2
+  Reload: .200000003
   hasShot: 0
---- !u!212 &21228236
+--- !u!212 &21226924
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152012}
+  m_GameObject: {fileID: 126924}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -65,7 +65,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c1ea9484af8f46098a7417ab2b60904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0dd2b53c46f40458798c7a48d87a8fba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -76,6 +76,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 152012}
+  m_RootGameObject: {fileID: 126924}
   m_IsPrefabParent: 1
   m_IsExploded: 1
