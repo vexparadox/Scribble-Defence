@@ -49,14 +49,14 @@ function Start () {
 	//fill arrays with the amount of enemies per wave
 	for(var i = 0; i < numberOfWaves; i++){
 		if(i == 0){
-			//on first wave have 10 grunts, 2 tanks and no speedys
+			//on first wave have 10 grunts
 			gruntsPerWave[i] = 10;
-			tanksPerWave[i] = 2;
+			tanksPerWave[i] = 0;
 			speedPerWave[i] = 0;
 		} else{
 			//each time increase number of enemies
 			gruntsPerWave[i] = (i+1)*6;
-			tanksPerWave[i] = (i+1)*3;
+			tanksPerWave[i] = (i+1)*2;
 			speedPerWave[i] = (i+1)*2; // 0 to keep the waves advancing
 		}
 		

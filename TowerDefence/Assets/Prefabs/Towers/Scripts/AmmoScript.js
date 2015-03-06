@@ -2,6 +2,7 @@
 var CurrentShortestObject: Transform; //holds the closest objects transform
 public var bulletspeed: float; //holds the bullet speed
 public var attackDamage: float; //holds the attack damage of the bullet type
+public var aoeRange:float; // holds AOE range on towers
 private var onscreen:boolean; //if the bullets are onscreen or not
 
 function Start () {

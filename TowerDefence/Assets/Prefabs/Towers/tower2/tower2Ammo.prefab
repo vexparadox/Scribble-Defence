@@ -14,7 +14,7 @@ GameObject:
   - 61: {fileID: 6171882}
   m_Layer: 0
   m_Name: tower2Ammo
-  m_TagString: Bullet
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,8 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
-  bulletspeed: 300
-  attackDamage: 15
+  bulletspeed: 200
+  attackDamage: 30
+  aoeRange: 1
 --- !u!212 &21271882
 SpriteRenderer:
   m_ObjectHideFlags: 1
