@@ -1,19 +1,18 @@
-TowerDefence/Library/
+Scribble Defence/Library/
 *.csproj
 *.sln
 *.userprefs
-TowerDefence/Library/guidmapper
+Scribble Defence/Library/guidmapper
 
-TowerDefence/Library/CurrentLayout.dwlt
+Scribble Defence/Library/CurrentLayout.dwlt
+Scribble Defence/Library/assetDatabase3
 
-TowerDefence/Library/assetDatabase3
+Scribble Defence/Library/InspectorExpandedItems.asset
 
-TowerDefence/Library/InspectorExpandedItems.asset
+Scribble Defence/Library/metadata/eb/eb468c6384a684d4bbd179accc92966d
 
-TowerDefence/Library/metadata/eb/eb468c6384a684d4bbd179accc92966d
+Scribble Defence/Library/metadata/f9/f95dc2faabe454ae98990e46af566fa6
 
-TowerDefence/Library/metadata/f9/f95dc2faabe454ae98990e46af566fa6
+Scribble Defence/Library/CurrentMaximizeLayout.dwlt
 
-TowerDefence/Library/CurrentMaximizeLayout.dwlt
-
-TowerDefence/Temp
+Scribble Defence/Temp

@@ -67,12 +67,12 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.GP3.DrawnDefence
+  iPhoneBundleIdentifier: com.GP3.ScribbleDefence
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 6248f41734e1a42ae84e8468b9074ed9
-  iPhoneBundleVersion: 1.1
-  AndroidBundleVersionCode: 1
+  iPhoneBundleVersion: 1.0.1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 19
   AndroidPreferredInstallLocation: 1
   aotOptions: 
