@@ -28,11 +28,11 @@ function Shoot(){
  }
  function findNearest(){
  	var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
- 	var CurrentShortestDist = 9999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
+ 	var CurrentShortestDist = 99999999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
  
 	for (var i = 0 ; i<EnemyFinder.length ; i++){
   	var TryingEnemy = EnemyFinder[i].transform.position;
- 	var TryingDistance = 99999;
+ 	var TryingDistance = 999999;
  	TryingDistance= Vector2.Distance(TryingEnemy, transform.localPosition); // find the distance between the tower and the enemy beind tested
  		if(TryingDistance<CurrentShortestDist){ //If the distance is the shorter than the current shortest  then swap the values to the shorter one
   			 CurrentShortestObject = EnemyFinder[i].transform;

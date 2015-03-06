@@ -55,9 +55,9 @@ function Start () {
 			speedPerWave[i] = 0;
 		} else{
 			//each time increase number of enemies
-			gruntsPerWave[i] = i*6;
-			tanksPerWave[i] = i*3;
-			speedPerWave[i] = 0; // 0 to keep the waves advancing
+			gruntsPerWave[i] = (i+1)*6;
+			tanksPerWave[i] = (i+1)*3;
+			speedPerWave[i] = (i+1)*2; // 0 to keep the waves advancing
 		}
 		
 		if(i >= 3){
@@ -92,16 +92,24 @@ function Spawn(){
 					SpawnTank(); // if there's not any more, play a tank (if there's any left)
 				} 
 	} else if(rndChance < 50){ //if it's not a grunt spawn a speedy/tank
-		//if(rndChance2 >50){
-			//spawn speedy
-		//}else{
+		if(rndChance2 >50){
+			if(currentEnemyCount[2] < speedPerWave[currentWave]){
+			SpawnSpeed();
+			} else if(currentEnemyCount[0]<gruntsPerWave[currentWave]){
+				SpawnGrunt();
+			} else if(currentEnemyCount[1]<tanksPerWave[currentWave]){
+				SpawnTank();
+			}
+		}else{
 			//spawn tank
 			if(currentEnemyCount[1]<tanksPerWave[currentWave]){
 				SpawnTank(); //if there's tanks left to play do it
 			} else if(currentEnemyCount[0]<gruntsPerWave[currentWave]){
 				SpawnGrunt(); //else if not, play a grunt instead (if there's any left)
-				}
-		//}
+			} else if(currentEnemyCount[2] < speedPerWave[currentWave]){
+				SpawnSpeed();
+			}
+	}
 	}
 	
 	//if they're all spawned, spawn the bosses
@@ -132,7 +140,6 @@ function SpawnTank(){
 		currentEnemyCount[1]++; //add one to the tally
 }
 
-/*
 function SpawnSpeed(){
 		var newEnemy:GameObject;
 		//create the enemy game object
@@ -140,7 +147,7 @@ function SpawnSpeed(){
 		newEnemy.transform.parent = enemyParentObject.transform; // put into enemy paretn
 		currentEnemyCount[2]++; //add one to the tally
 }
-*/
+
 function SpawnBoss(){
 		var newEnemy:GameObject;
 		//create the enemy game object

@@ -1,60 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &106132
+--- !u!1 &134624
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 406132}
-  - 212: {fileID: 21206132}
-  - 114: {fileID: 11473830}
-  - 58: {fileID: 5888924}
-  - 114: {fileID: 11482624}
+  - 4: {fileID: 434624}
+  - 212: {fileID: 21234624}
+  - 58: {fileID: 5834624}
+  - 114: {fileID: 11434624}
+  - 114: {fileID: 11421224}
   m_Layer: 0
-  m_Name: tower3
+  m_Name: tower4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &406132
+--- !u!4 &434624
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106132}
+  m_GameObject: {fileID: 134624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5658474, y: 2.53688955, z: -5.8671875}
-  m_LocalScale: {x: .476522774, y: .476522774, z: .476522774}
+  m_LocalPosition: {x: -6.84899998, y: -3.05500007, z: 0}
+  m_LocalScale: {x: .499096841, y: .499096841, z: .499096841}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5888924
+--- !u!58 &5834624
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106132}
+  m_GameObject: {fileID: 134624}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 2.21570778
+  m_Radius: 2.08054519
   m_Center: {x: 0, y: 0}
---- !u!114 &11473830
+--- !u!114 &11421224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106132}
+  m_GameObject: {fileID: 134624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11434624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134624}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7acf14565b794b8cbdfc516f9920d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
-  toSpawn: {fileID: 126924, guid: 32428297eee394bf881d4930760f7475, type: 2}
+  toSpawn: {fileID: 173090, guid: 14639eb0f3ffc4a78b59dd3ee33f8e1e, type: 2}
   bases:
   - {fileID: 0}
   - {fileID: 0}
@@ -118,24 +129,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   baseStatus: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  TowerID: 1
---- !u!114 &11482624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &21206132
+  TowerID: 3
+--- !u!212 &21234624
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106132}
+  m_GameObject: {fileID: 134624}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0dd2b53c46f40458798c7a48d87a8fba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcfdafe8e5594213bb3c1034366327c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -161,6 +161,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 106132}
+  m_RootGameObject: {fileID: 134624}
   m_IsPrefabParent: 1
   m_IsExploded: 1
