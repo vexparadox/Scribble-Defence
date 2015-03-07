@@ -3,9 +3,9 @@ using System.Collections;
 
 public class AmmoDestroyer : MonoBehaviour {
 
-	void OnCollision2D(Collider2D other){
-		if (other.gameObject.tag == "Bullet") {
-			Destroy(other);
+	void OnCollisionEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "Bomb") {
+			Destroy(other.gameObject);
 				}
 	}
 }

@@ -67,7 +67,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.GP3.ScribbleDefence
+  iPhoneBundleIdentifier: com.GP3.DrawnDefence
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 6248f41734e1a42ae84e8468b9074ed9

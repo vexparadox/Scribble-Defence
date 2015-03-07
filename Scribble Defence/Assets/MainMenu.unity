@@ -367,7 +367,7 @@ GameObject:
   - 222: {fileID: 608583890}
   - 114: {fileID: 608583889}
   m_Layer: 0
-  m_Name: TowerCost1
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,7 +433,7 @@ GameObject:
   - 222: {fileID: 653759686}
   - 114: {fileID: 653759685}
   m_Layer: 0
-  m_Name: TowerCost1
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,7 +914,7 @@ GameObject:
   - 222: {fileID: 1880540974}
   - 114: {fileID: 1880540973}
   m_Layer: 0
-  m_Name: TowerCost1
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

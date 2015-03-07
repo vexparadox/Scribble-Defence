@@ -71,7 +71,7 @@ MonoBehaviour:
   CurrentShortestObject: {fileID: 0}
   bulletspeed: 200
   attackDamage: 30
-  aoeRange: 1
+  aoeRange: 1.5
 --- !u!212 &21271882
 SpriteRenderer:
   m_ObjectHideFlags: 1
