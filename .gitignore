@@ -1,4 +1,4 @@
-Scribble Defence/Library/
+Scribble Defence/Library
 *.csproj
 *.sln
 *.userprefs
@@ -7,6 +7,7 @@ Scribble Defence/Library/guidmapper
 Scribble Defence/Library/CurrentLayout.dwlt
 Scribble Defence/Library/assetDatabase3
 
+Scribble Defence/Library/ScriptAssemblies
 Scribble Defence/Library/InspectorExpandedItems.asset
 
 Scribble Defence/Library/metadata/eb/eb468c6384a684d4bbd179accc92966d
