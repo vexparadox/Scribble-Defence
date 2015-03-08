@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
-  bulletspeed: 300
+  bulletspeed: 450
   attackDamage: 2
   aoeRange: 0
 --- !u!212 &21268856
