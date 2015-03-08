@@ -807,6 +807,7 @@ GameObject:
   - 212: {fileID: 1600182036}
   - 95: {fileID: 1600182035}
   - 61: {fileID: 1600182033}
+  - 114: {fileID: 1600182034}
   m_Layer: 0
   m_Name: UI prefab
   m_TagString: Untagged
@@ -838,6 +839,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 8.25960541, y: 2.42963052}
   m_Center: {x: -.0380243436, y: .0768723637}
+--- !u!114 &1600182034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600182031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: Options
 --- !u!95 &1600182035
 Animator:
   serializedVersion: 3
