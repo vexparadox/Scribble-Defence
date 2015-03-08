@@ -1,0 +1,23 @@
+When building an APK to upload to google you must first make sure it’s signed and increase the version numbers. 
+
+File > Build Settings > Player Settings > Publishing Settings > AndroidLogo
+
+Here there’s a button to browse for a keystone, do this and find user.keystore in the github root folder.
+
+The Keystore password is: gp3best
+
+You must then select the Key alias below called: scribble defence
+With the password: gp3best
+
+You can now build the APK signed (meaning not a debuggable build which google doesn’t accept)
+
+To increase the version number (required by google for each upload) go to:
+File > Build Settings > Player Settings > Publishing Settings > AndroidLogo
+
+Go to the Other Settings tab
+The “bundle version” is the build version “1.0.4” incremement in a logical way:
+1.0.4.5 - hot patch for a tiny problem
+1.0.5 - small fixes and builds
+1.1.0 - big changed, new modes/new maps
+
+The “bundle version code” is just an integer “6” increment for every build you make regardless of importance.
