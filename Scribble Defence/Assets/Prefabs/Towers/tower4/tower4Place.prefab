@@ -43,7 +43,7 @@ MonoBehaviour:
   CurrentShortestObject: {fileID: 0}
   TowerAmmo: {fileID: 182566, guid: 0acb4bca16d2241baaea91c2f7d3668b, type: 2}
   Range: 1000
-  Reload: 7
+  Reload: 8
   hasShot: 0
 --- !u!212 &21273090
 SpriteRenderer:

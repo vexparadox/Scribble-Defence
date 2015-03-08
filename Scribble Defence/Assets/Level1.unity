@@ -921,6 +921,7 @@ Transform:
   - {fileID: 5315234}
   - {fileID: 1915877594}
   - {fileID: 1329793194}
+  - {fileID: 1121927838}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &314371248
@@ -2471,7 +2472,7 @@ GameObject:
   - 4: {fileID: 1121927838}
   - 212: {fileID: 1121927837}
   m_Layer: 0
-  m_Name: heart_0
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2506,11 +2507,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121927836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.57999992, y: 2.50999999, z: 0}
+  m_LocalPosition: {x: 5.57999992, y: 2.50999999, z: -5.8671875}
   m_LocalScale: {x: .541591406, y: .541591406, z: .541591406}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 296781248}
+  m_RootOrder: 6
 --- !u!1 &1189852292
 GameObject:
   m_ObjectHideFlags: 0
