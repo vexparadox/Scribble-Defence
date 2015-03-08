@@ -271,7 +271,6 @@ GameObject:
   - 4: {fileID: 472273591}
   - 212: {fileID: 472273590}
   - 95: {fileID: 472273589}
-  - 114: {fileID: 472273588}
   - 61: {fileID: 472273587}
   m_Layer: 0
   m_Name: UI prefab
@@ -292,19 +291,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 8.25960541, y: 2.42963052}
   m_Center: {x: -.0380243436, y: .0768723637}
---- !u!114 &472273588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11475626, guid: d641aee7dbd064d3bab7ae17ac09167d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1588177785}
-  m_GameObject: {fileID: 472273586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level1
 --- !u!95 &472273589
 Animator:
   serializedVersion: 3
@@ -631,7 +617,8 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .879311681
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11475626, guid: d641aee7dbd064d3bab7ae17ac09167d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d641aee7dbd064d3bab7ae17ac09167d, type: 2}
   m_RootGameObject: {fileID: 1600182031}
   m_IsPrefabParent: 0
@@ -803,7 +790,8 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .879311681
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11475626, guid: d641aee7dbd064d3bab7ae17ac09167d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d641aee7dbd064d3bab7ae17ac09167d, type: 2}
   m_RootGameObject: {fileID: 472273586}
   m_IsPrefabParent: 0
@@ -818,7 +806,6 @@ GameObject:
   - 4: {fileID: 1600182032}
   - 212: {fileID: 1600182036}
   - 95: {fileID: 1600182035}
-  - 114: {fileID: 1600182034}
   - 61: {fileID: 1600182033}
   m_Layer: 0
   m_Name: UI prefab
@@ -851,19 +838,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 8.25960541, y: 2.42963052}
   m_Center: {x: -.0380243436, y: .0768723637}
---- !u!114 &1600182034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11475626, guid: d641aee7dbd064d3bab7ae17ac09167d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1191118206}
-  m_GameObject: {fileID: 1600182031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level1
 --- !u!95 &1600182035
 Animator:
   serializedVersion: 3
