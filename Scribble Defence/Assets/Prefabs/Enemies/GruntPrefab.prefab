@@ -12,6 +12,7 @@ GameObject:
   - 95: {fileID: 9524216}
   - 114: {fileID: 11479812}
   - 114: {fileID: 11436618}
+  - 61: {fileID: 6193562}
   m_Layer: 0
   m_Name: GruntPrefab
   m_TagString: Enemy
@@ -26,11 +27,22 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1500001, y: -1.04999995, z: 0}
+  m_LocalPosition: {x: -5.05791664, y: -1.7547338, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6193562
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124216}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1.98373914, y: 2.32318783}
+  m_Center: {x: -.0189574547, y: -.031594038}
 --- !u!95 &9524216
 Animator:
   serializedVersion: 3
