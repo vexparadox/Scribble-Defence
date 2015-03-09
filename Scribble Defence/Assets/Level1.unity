@@ -1841,7 +1841,7 @@ MonoBehaviour:
   CurrentCurrency: 0
   StartCurrency: 175
   EnemyWorth: 0a0000000f0000000500000064000000
-  TowerCost: 320000004b00000096000000fa000000
+  TowerCost: 320000007d000000c800000077010000
   CurrencyLabel: {fileID: 1116105969}
   TowerCostLabel:
   - {fileID: 0}
