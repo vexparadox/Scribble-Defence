@@ -21,7 +21,7 @@ function Start () {
 
 function Update () {
 //if he's dead, kill him
-		if (health < 1) {
+		if (health <= 0) {
 			Destroy(gameObject);
 			_GM.SendMessage("deadCash", enemyID);
 			_GM.SendMessage("enemyDead");
@@ -40,7 +40,7 @@ function OnCollisionEnter2D(collider: Collision2D)
 		if (collider.gameObject.tag == "Bullet") //if hit by a bullet
 		{
 			Destroy(collider.gameObject); // destroy the bullet on contact
-			if (health > 1)
+			if (health > 0)
 			{	
 
 				updateHealth(ammo.attackDamage); //take the set amount of damage away from the health
@@ -49,7 +49,7 @@ function OnCollisionEnter2D(collider: Collision2D)
 		else if(collider.gameObject.tag == "Bomb") // if hit by a bomb
 		{
 
-			if (health > 1)
+			if (health > 0 )
 			{	
 				aoe = ammo.aoeRange;
 			
