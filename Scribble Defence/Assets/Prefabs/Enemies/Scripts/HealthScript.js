@@ -1,6 +1,7 @@
 ﻿#pragma strict
-	public var maxHealth:int; //holds the maximum health it can have
+	public var startingHealth:int; //holds the maximum health it can have
 	public var health:int; // holds current health, this changes throughout
+	private var waveModifier:int = 10; // holds by how much the health increases each wave
 	private var aoe:int; //area of effect	
 	//holds the enemy's ID
 	/*
@@ -12,13 +13,15 @@
 	public var enemyID: int;
 	//Reference to the game master
 	private var _GM:GameObject;
+	private var currentWaveNumber:int; // holds the current wave number
 
 function Start () {
-	health = maxHealth;
 	//find the game master
 	_GM = GameObject.Find("_GM");
-}
+	currentWaveNumber = _GM.GetComponent(EnemySpawnScript).currentWave; //get the wave number
+	health = startingHealth + (waveModifier*currentWaveNumber); //initiate health and add the wave modifier
 
+}
 function Update () {
 //if he's dead, kill him
 		if (health <= 0) {
