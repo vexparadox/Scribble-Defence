@@ -1,7 +1,7 @@
 ﻿#pragma strict
 	public var startingHealth:int; //holds the maximum health it can have
 	public var health:int; // holds current health, this changes throughout
-	private var waveModifier:int = 10; // holds by how much the health increases each wave
+	private var waveModifier:int = 15; // holds by how much the health increases each wave
 	private var aoe:int; //area of effect	
 	//holds the enemy's ID
 	/*

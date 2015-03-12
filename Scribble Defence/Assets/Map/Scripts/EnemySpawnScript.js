@@ -55,13 +55,15 @@ function Start () {
 			speedPerWave[i] = 0;
 		} else{
 			//each time increase number of enemies
-			gruntsPerWave[i] = (i+1)*6;
-			tanksPerWave[i] = (i+1)*2;
-			speedPerWave[i] = (i+1)*2; // 0 to keep the waves advancing
+			gruntsPerWave[i] = (i+1)*7;
+			tanksPerWave[i] = (i+1)*3;
+			speedPerWave[i] = 0;
 		}
 		
 		if(i >= 3){
+		speedPerWave[i] = (i+1)*3; // 0 to keep the waves advancing
 			if(i == numberOfWaves-1){
+
 				bossPerWave[i] = 2; //2 bosses on last wave
 			}else{ 
 				bossPerWave[i] = 1; //one on everything after 2nd wave

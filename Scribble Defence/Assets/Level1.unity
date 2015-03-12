@@ -1839,9 +1839,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentCurrency: 0
-  StartCurrency: 175
+  StartCurrency: 200
   EnemyWorth: 0a0000000f0000000500000064000000
-  TowerCost: 320000007d000000c800000077010000
+  TowerCost: 3200000064000000fa00000090010000
   CurrencyLabel: {fileID: 1116105969}
   TowerCostLabel:
   - {fileID: 0}

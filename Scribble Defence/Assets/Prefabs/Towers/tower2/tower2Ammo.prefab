@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
   bulletspeed: 400
-  attackDamage: 25
+  attackDamage: 10
   aoeRange: 2
 --- !u!212 &21271882
 SpriteRenderer:
