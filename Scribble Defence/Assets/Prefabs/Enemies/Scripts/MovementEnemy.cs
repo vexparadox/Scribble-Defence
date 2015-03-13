@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MovementEnemy : MonoBehaviour {
 	
 	private int nextWaypointIndex = 0;
 	public float Speed = 1f;
+	public List<Transform> Ways = new List<Transform>();
 	public Transform[] Waypoints = new Transform[9];
 	//get the Lives GM
 	private LivesScript GMLives;
@@ -20,6 +22,15 @@ public class MovementEnemy : MonoBehaviour {
 		GMLives = Temp.GetComponent<LivesScript> ();
 		GMSpawn = Temp;
 
+		//find the way points, no matter how many there are
+		for (int i = 0; i < 100; i++) { // loop to an arbitrarily high number
+			GameObject tempWay = GameObject.Find ("way" + i); // attempt to find a way point with the loop number
+			if (tempWay != null) {
+				Ways.Add (tempWay.transform); // if it's found, add it to the list
+			} else {
+				break; //else stop the loop, you've found all the way points
+			}
+		}
 		for (int i = 0; i < Waypoints.Length; i++) {
 			Waypoints[i] = GameObject.Find("way"+i).transform;
 		}
