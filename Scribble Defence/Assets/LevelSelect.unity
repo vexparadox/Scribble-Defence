@@ -140,7 +140,7 @@ GameObject:
   - 61: {fileID: 254796227}
   - 114: {fileID: 254796226}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +412,7 @@ GameObject:
   - 61: {fileID: 769671950}
   - 114: {fileID: 769671955}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
