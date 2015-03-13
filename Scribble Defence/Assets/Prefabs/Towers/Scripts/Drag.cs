@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Drag : MonoBehaviour 
 {	
@@ -17,30 +18,39 @@ public class Drag : MonoBehaviour
 	private int closerBase;
 	private Transform basePosition;
 	//holds the position and status of that base
-	public Transform[] bases = new Transform[20];
-	public int[] baseStatus = new int[20];
+	public List<Transform> bases = new List<Transform>();
+	//public Transform[] bases = new Transform[20];
 	//used to identify the tower you've picked up
 	//tower 1 = 0, tower 2 = 1 etc..
 	public int TowerID;
 
 	//Reference to the game master
-	private CurrencyScript GM;
+	private CurrencyScript CurrencyGM;
+	private BasesScript BasesGM;
 
 
 	void Start(){
 		//find all the bases on the map
-		for (int i=0; i<bases.Length; i++) {
-			bases[i] = GameObject.Find("base"+(i+1)).transform;
+		for (int i = 0; i < 200; i++) { // loop to an arbitrarily high number
+			GameObject tempBase = GameObject.Find("base" + (i+1)); // attempt to find a way point with the loop number
+			if (tempBase != null && tempBase.gameObject.tag == "Base") {
+				bases.Add(tempBase.transform); // if it's found, add it to the list
+			} else {
+				break; //else stop the loop, you've found all the way points
+			}
 		}
-		//initialise the baseStatus with 0, this means there's no tower there
-		for (int i=0; i<bases.Length; i++) {
-			baseStatus[i] = 0;
+		//remove the pesky null things
+		for (int k = bases.Count-1; k >= 0; k--) {
+			if(bases[k] == null){
+				bases.RemoveAt(k);
+			}
 		}
 
 		//find the GM
 		GameObject Temp;
 		Temp = GameObject.Find ("_GM");
-		GM = Temp.GetComponent<CurrencyScript> ();
+		BasesGM = Temp.GetComponent<BasesScript> (); // get the bases script
+		CurrencyGM = Temp.GetComponent<CurrencyScript> (); // get the currency GM
 	}
 
 	void OnMouseDown()
@@ -63,7 +73,7 @@ public class Drag : MonoBehaviour
 		//find the closest base to the mouse/tower(dragged)
 		leastDistance = Vector2.Distance(bases[0].transform.position,curPosition);
 		closerBase = 0;
-		for(int i=0;i<bases.Length;i++){
+		for(int i=0;i<bases.Count;i++){
 			//to take the shortest distance to the base of the tower
 			if( Vector2.Distance(bases[i].transform.position,curPosition) < leastDistance){
 				leastDistance = Vector2.Distance(bases[i].transform.position,curPosition);
@@ -74,7 +84,7 @@ public class Drag : MonoBehaviour
 
 		//if the distance to the closet base is less than 2 and it's not already ocuppied
 		//else if will just follow the mouse
-		if (Vector2.Distance (transform.position, bases[closerBase].position) < 1 && baseStatus[closerBase] != 1) {
+		if (Vector2.Distance (transform.position, bases[closerBase].position) < 1 && BasesGM.Basefull(closerBase)) {
 			transform.position = bases [closerBase].position; // move the tower(dragged) onto the base
 			endPosition = bases [closerBase].position; // set an end position to instantiate an object onto
 			snapped = true; // set the snapped to true
@@ -89,8 +99,8 @@ public class Drag : MonoBehaviour
 		grid.renderer.enabled = false; //disable the grid showing
 		transform.position = startPoint; // ping the tower back to it's UI start position
 		//make sure it's actually on a base before placing
-		if (snapped && GM.CanAfford(TowerID)) {
-			baseStatus [closerBase] = 1; //mark the base as occupied
+		if (snapped && CurrencyGM.CanAfford(TowerID)) {
+			BasesGM.Basefill(closerBase); // make the base filled
 			Instantiate (toSpawn, endPosition, Quaternion.identity); //create an object at that point
 			snapped = false; // flip the snapped variable
 			}
