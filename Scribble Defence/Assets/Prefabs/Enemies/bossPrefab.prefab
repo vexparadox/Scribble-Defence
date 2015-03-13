@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1200
   health: 0
-  enemyID: 0
+  enemyID: 3
 --- !u!212 &21236688
 SpriteRenderer:
   m_ObjectHideFlags: 1
