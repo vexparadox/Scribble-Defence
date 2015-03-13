@@ -273,7 +273,7 @@ GameObject:
   - 95: {fileID: 472273589}
   - 61: {fileID: 472273587}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +638,7 @@ GameObject:
   - 114: {fileID: 1465632767}
   - 61: {fileID: 1465632768}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,7 +809,7 @@ GameObject:
   - 61: {fileID: 1600182033}
   - 114: {fileID: 1600182034}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11475626}
   - 61: {fileID: 6175626}
   m_Layer: 0
-  m_Name: UI prefab
+  m_Name: UI prefab red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
