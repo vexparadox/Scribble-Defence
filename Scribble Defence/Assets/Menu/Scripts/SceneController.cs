@@ -6,6 +6,7 @@ public class SceneController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep; // stop screen from sleeping
+		QualitySettings.vSyncCount = 0; // turn of VSync
 	}
 }
 
