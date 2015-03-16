@@ -152,7 +152,6 @@ GameObject:
   - 95: {fileID: 187689112}
   - 114: {fileID: 187689111}
   - 61: {fileID: 187689110}
-  - 114: {fileID: 187689109}
   m_Layer: 0
   m_Name: UI prefab red
   m_TagString: Untagged
@@ -172,18 +171,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 293817930}
   m_RootOrder: 2
---- !u!114 &187689109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 187689107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level2
 --- !u!61 &187689110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,7 +368,6 @@ GameObject:
   - 95: {fileID: 254796229}
   - 114: {fileID: 254796228}
   - 61: {fileID: 254796227}
-  - 114: {fileID: 254796226}
   m_Layer: 0
   m_Name: UI prefab red
   m_TagString: Untagged
@@ -401,18 +387,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 293817930}
   m_RootOrder: 1
---- !u!114 &254796226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 254796224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level2
 --- !u!61 &254796227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,7 +694,6 @@ GameObject:
   - 95: {fileID: 519366097}
   - 114: {fileID: 519366096}
   - 61: {fileID: 519366095}
-  - 114: {fileID: 519366094}
   m_Layer: 0
   m_Name: UI prefab red
   m_TagString: Untagged
@@ -740,18 +713,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 293817930}
   m_RootOrder: 4
---- !u!114 &519366094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 519366092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level2
 --- !u!61 &519366095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -894,7 +855,6 @@ GameObject:
   - 95: {fileID: 728812928}
   - 114: {fileID: 728812927}
   - 61: {fileID: 728812926}
-  - 114: {fileID: 728812925}
   m_Layer: 0
   m_Name: UI prefab red
   m_TagString: Untagged
@@ -902,18 +862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &728812925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 728812924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level2
 --- !u!61 &728812926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1002,7 +950,6 @@ GameObject:
   - 95: {fileID: 769671952}
   - 114: {fileID: 769671951}
   - 61: {fileID: 769671950}
-  - 114: {fileID: 769671955}
   m_Layer: 0
   m_Name: UI prefab red
   m_TagString: Untagged
@@ -1086,18 +1033,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 293817930}
   m_RootOrder: 0
---- !u!114 &769671955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 769671949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Level1
 --- !u!1001 &964949154
 Prefab:
   m_ObjectHideFlags: 0
