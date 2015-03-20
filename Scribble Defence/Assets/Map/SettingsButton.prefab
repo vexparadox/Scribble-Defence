@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21282434}
   - 61: {fileID: 6182434}
   - 114: {fileID: 11483438}
+  - 114: {fileID: 11439042}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.11999989, y: -.649999976, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
+  m_LocalPosition: {x: 5.88999987, y: -3.50999999, z: -5.86999989}
+  m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,6 +42,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 5.31999969, y: 5.23999977}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11439042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: LevelSelect
 --- !u!114 &11483438
 MonoBehaviour:
   m_ObjectHideFlags: 1

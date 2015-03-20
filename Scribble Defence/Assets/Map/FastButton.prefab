@@ -9,9 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 439942}
   - 212: {fileID: 21239942}
-  - 95: {fileID: 9539942}
-  - 61: {fileID: 6139942}
   - 114: {fileID: 11439942}
+  - 61: {fileID: 6168808}
   m_Layer: 0
   m_Name: FastButton
   m_TagString: Untagged
@@ -26,12 +25,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.21999979, y: -1.85000002, z: -5.86999989}
-  m_LocalScale: {x: .400000006, y: .400000006, z: 1}
+  m_LocalPosition: {x: 7.46999979, y: -3.5, z: -5.86999989}
+  m_LocalScale: {x: .150000006, y: .150000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6139942
+--- !u!61 &6168808
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -40,23 +39,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 8.25960541, y: 2.42963052}
-  m_Center: {x: -.0380243436, y: .0768723637}
---- !u!95 &9539942
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139942}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bb61e62b652f744a3b52d49f786bf1fe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 11.3729153, y: 8.86383343}
+  m_Center: {x: -.0843429565, y: .295201927}
 --- !u!114 &11439942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84092045eaff4d0cbedd68c7d538054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offSprite: {fileID: 21300000, guid: c1f033d37239c496ebcbe27177fc149e, type: 3}
+  onSprite: {fileID: 21300002, guid: c1f033d37239c496ebcbe27177fc149e, type: 3}
 --- !u!212 &21239942
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -86,9 +72,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 3436024583
+  m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fc597692de5a747dc888ed436dd6ad17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1f033d37239c496ebcbe27177fc149e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
