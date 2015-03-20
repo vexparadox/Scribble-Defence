@@ -4194,6 +4194,7 @@ GameObject:
   - 95: {fileID: 1895327069}
   - 114: {fileID: 1895327068}
   - 61: {fileID: 1895327067}
+  - 114: {fileID: 1895327071}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -4277,6 +4278,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fc597692de5a747dc888ed436dd6ad17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1895327071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11424198, guid: c1b0cb60e383640e587ac62e3730a83f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1629073338}
+  m_GameObject: {fileID: 1895327065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1915877592
 GameObject:
   m_ObjectHideFlags: 0
