@@ -1415,7 +1415,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Mode
+  m_Text: Mode Label
 --- !u!222 &1762243770
 CanvasRenderer:
   m_ObjectHideFlags: 0
