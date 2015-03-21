@@ -8,6 +8,8 @@ public class LivesScript : MonoBehaviour {
 	private string endMessage;
 	public Text LivesLabel;
 
+	private bool Win = false;
+
 	// Use this for initialization
 	void Start () {
 		CurrentLives = StartLives;
@@ -30,12 +32,14 @@ public class LivesScript : MonoBehaviour {
 
 	//passed from EnemySpawnScript.JS
 	public void levelWon(){
-		endMessage = "You did it yay!";
+		Win = true;
 		GameOver();
 	}
 
 	void GameOver(){
-		int progression = PlayerPrefs.GetInt ("LevelProgression");
-		PlayerPrefs.SetInt ("LevelProgression", progression + 1);
+		if (Win) {
+			int progression = PlayerPrefs.GetInt ("LevelProgression");
+			PlayerPrefs.SetInt ("LevelProgression", progression + 1);
+				}
 	}
 }
