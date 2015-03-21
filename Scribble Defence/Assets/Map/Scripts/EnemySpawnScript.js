@@ -183,11 +183,12 @@ function checkForRoundEnd(){
 				currentEnemyCount[i] = 0;
 			}
 			yield WaitForSeconds(timeBetweenWaves); //wait for time before waves
-			roundOver = false; // start spawning again 
+			roundOver = false; // staart spawning again 
 			Spawn(); //call spawn
 			updateUI();
 			Debug.Log("New wave");
 		} else{
+			//level won 
 			_GM.SendMessage("levelWon");
 		}
 	}

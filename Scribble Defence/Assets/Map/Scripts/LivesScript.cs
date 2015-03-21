@@ -7,8 +7,7 @@ public class LivesScript : MonoBehaviour {
 	public int CurrentLives; // holds the current amount of lives
 	private string endMessage;
 	public Text LivesLabel;
-	public bool gameOver;
-		
+
 	// Use this for initialization
 	void Start () {
 		CurrentLives = StartLives;
@@ -21,24 +20,22 @@ public class LivesScript : MonoBehaviour {
 		UpdateLivesUI();
 	}
 
-	void Update(){
-		if (gameOver) {
-			Time.timeScale = 0;
-			Debug.Log (endMessage);
-		}
-	}
-
 	void UpdateLivesUI(){
 		if (CurrentLives <= 0) {
-			gameOver = true;
 			endMessage = "You ran out of lives! :(";
+			GameOver();
 				}
 		LivesLabel.text = CurrentLives.ToString();
 	}
 
 	//passed from EnemySpawnScript.JS
 	public void levelWon(){
-		gameOver = true;
 		endMessage = "You did it yay!";
+		GameOver();
+	}
+
+	void GameOver(){
+		int progression = PlayerPrefs.GetInt ("LevelProgression");
+		PlayerPrefs.SetInt ("LevelProgression", progression + 1);
 	}
 }
