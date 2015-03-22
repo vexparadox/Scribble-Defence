@@ -2086,10 +2086,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLives: 15
   CurrentLives: 0
+  CurrentLevel: 1
   LivesLabel: {fileID: 915353533}
-  fadeOutTexture: {fileID: 2800000, guid: e19be076762c74839be86fcf85bddaa2, type: 3}
-  fadeSpeed: 5
-  gameOver: 0
+  gameover: 0
 --- !u!114 &638682525
 MonoBehaviour:
   m_ObjectHideFlags: 0

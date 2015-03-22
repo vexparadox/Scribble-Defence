@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour {
 	private int progression;
 
 	void Start(){
+		//get their current progression
 		progression = PlayerPrefs.GetInt ("LevelProgression");
 		}
 	void OnMouseDown(){

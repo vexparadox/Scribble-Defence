@@ -1972,8 +1972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLives: 15
   CurrentLives: 0
+  CurrentLevel: 2
   LivesLabel: {fileID: 915353533}
-  gameOver: 0
+  gameover: 0
 --- !u!114 &638682525
 MonoBehaviour:
   m_ObjectHideFlags: 0

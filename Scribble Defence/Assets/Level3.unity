@@ -1735,6 +1735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentCurrency: 0
   StartCurrency: 200
+  score: 0
+  top5Scores: 
   EnemyWorth: 0a0000000f0000000500000064000000
   TowerCost: 3200000064000000fa00000090010000
   CurrencyLabel: {fileID: 1116105969}
@@ -1743,6 +1745,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  HighScore: {fileID: 0}
 --- !u!114 &638682524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,8 +1759,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLives: 15
   CurrentLives: 0
+  CurrentLevel: 3
   LivesLabel: {fileID: 915353533}
-  gameOver: 0
+  gameover: 0
 --- !u!114 &638682525
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1223,6 +1223,7 @@ GameObject:
   - 212: {fileID: 408481399}
   - 61: {fileID: 408481398}
   - 114: {fileID: 408481397}
+  - 114: {fileID: 408481400}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1289,6 +1290,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 84aa474ef66aa4583b0d6431897c2d51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &408481400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11439042, guid: ef8e41d5448cb4ea0bfe7d3b587a3a0d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1113738006}
+  m_GameObject: {fileID: 408481395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: LevelSelect
 --- !u!1 &417444463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentCurrency: 0
   StartCurrency: 200
+  score: 0
+  top5Scores: 
   EnemyWorth: 0a0000000f0000000500000064000000
   TowerCost: 3200000064000000fa00000090010000
   CurrencyLabel: {fileID: 1116105969}
@@ -1909,6 +1925,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  HighScore: {fileID: 0}
 --- !u!114 &638682524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,8 +1939,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLives: 15
   CurrentLives: 0
+  CurrentLevel: 5
   LivesLabel: {fileID: 915353533}
-  gameOver: 0
+  gameover: 0
 --- !u!114 &638682525
 MonoBehaviour:
   m_ObjectHideFlags: 0

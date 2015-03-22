@@ -5,9 +5,11 @@ using System.Collections;
 public class LivesScript : MonoBehaviour {
 	public int StartLives; // holds the start amount of lives
 	public int CurrentLives; // holds the current amount of lives
-	private string endMessage;
+	public int CurrentLevel; // holds the current level number
+	private string endMessage; // holds the end message
 	public Text LivesLabel;
 
+	public bool gameover;
 	private bool Win = false;
 
 	// Use this for initialization
@@ -22,9 +24,17 @@ public class LivesScript : MonoBehaviour {
 		UpdateLivesUI();
 	}
 
+	void Update(){
+		if (gameover) {
+			Win = true;
+			GameOver();
+				}
+	}
+
 	void UpdateLivesUI(){
 		if (CurrentLives <= 0) {
 			endMessage = "You ran out of lives! :(";
+			Win = false;
 			GameOver();
 				}
 		LivesLabel.text = CurrentLives.ToString();
@@ -38,8 +48,8 @@ public class LivesScript : MonoBehaviour {
 
 	void GameOver(){
 		if (Win) {
-			int progression = PlayerPrefs.GetInt ("LevelProgression");
-			PlayerPrefs.SetInt ("LevelProgression", progression + 1);
-				}
+			//get the level number and make add it to the progression
+			PlayerPrefs.SetInt ("LevelProgression", (CurrentLevel+1));
+			}
 	}
 }

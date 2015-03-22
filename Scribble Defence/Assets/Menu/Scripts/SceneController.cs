@@ -7,11 +7,10 @@ public class SceneController : MonoBehaviour {
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep; // stop screen from sleeping
 
-		PlayerPrefs.DeleteKey ("LevelProgression");
-		//check the level progression
-		if (!PlayerPrefs.HasKey ("LevelProgression")) {
+		//check the level progression exisits, else set it to 1
+		if (PlayerPrefs.GetInt("LevelProgression") < 1) {
 			PlayerPrefs.SetInt("LevelProgression", 1);
-				}
+		}
 		//check vsync options
 		int VSyncPrefs = PlayerPrefs.GetInt ("VSync"); //get player preferences
 		if (VSyncPrefs == 0 || !PlayerPrefs.HasKey("VSync")) {
