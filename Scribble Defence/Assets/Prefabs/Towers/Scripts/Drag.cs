@@ -87,6 +87,7 @@ public class Drag : MonoBehaviour
 		//else if will just follow the mouse
 		if (Vector2.Distance (transform.position, bases[closerBase].position) < 1 && BasesGM.Basefull(closerBase)) {
 			transform.position = bases [closerBase].position; // move the tower(dragged) onto the base
+			rangeCircle.transform.position = new Vector3 (bases [closerBase].position.x, bases [closerBase].position.y, 0);
 			endPosition = bases [closerBase].position; // set an end position to instantiate an object onto
 			snapped = true; // set the snapped to true
 				} else {
@@ -97,7 +98,7 @@ public class Drag : MonoBehaviour
 
 	void OnMouseUp(){
 		//sort out some booleans
-		rangeCircle.transform.position = new Vector3 (-20, 0, 0);
+		rangeCircle.transform.position = new Vector3 (-30, 0, 0);
 		grid.renderer.enabled = false; //disable the grid showing
 		transform.position = startPoint; // ping the tower back to it's UI start position
 		//make sure it's actually on a base before placing
