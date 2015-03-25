@@ -1289,6 +1289,7 @@ GameObject:
   - 212: {fileID: 495637913}
   - 114: {fileID: 495637912}
   - 61: {fileID: 495637911}
+  - 114: {fileID: 495637915}
   m_Layer: 0
   m_Name: FastButton
   m_TagString: Untagged
@@ -1357,6 +1358,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 516678132}
   m_RootOrder: 4
+--- !u!114 &495637915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432868, guid: 515dd6be7fa4446299290ed603923d07,
+    type: 2}
+  m_PrefabInternal: {fileID: 2036478763}
+  m_GameObject: {fileID: 495637910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510356070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2416,7 @@ GameObject:
   - 61: {fileID: 964428266}
   - 114: {fileID: 964428265}
   - 114: {fileID: 964428268}
+  - 114: {fileID: 964428269}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -2482,6 +2496,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: LevelSelect
+--- !u!114 &964428269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11474692, guid: ef8e41d5448cb4ea0bfe7d3b587a3a0d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1456658166}
+  m_GameObject: {fileID: 964428263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &982432346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,7 +4243,7 @@ Transform:
   m_GameObject: {fileID: 1830338866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7

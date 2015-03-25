@@ -47,6 +47,8 @@ public class Drag : MonoBehaviour
 			}
 		}
 
+
+
 		//find the GM
 		GameObject Temp;
 		Temp = GameObject.Find ("_GM");

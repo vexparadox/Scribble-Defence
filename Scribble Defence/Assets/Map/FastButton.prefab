@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21239942}
   - 114: {fileID: 11439942}
   - 61: {fileID: 6168808}
+  - 114: {fileID: 11432868}
   m_Layer: 0
   m_Name: FastButton
   m_TagString: Untagged
@@ -41,6 +42,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 11.3729153, y: 8.86383343}
   m_Center: {x: -.0843429565, y: .295201927}
+--- !u!114 &11432868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11439942
 MonoBehaviour:
   m_ObjectHideFlags: 1

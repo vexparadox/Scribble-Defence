@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6182434}
   - 114: {fileID: 11483438}
   - 114: {fileID: 11439042}
+  - 114: {fileID: 11474692}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -54,6 +55,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: LevelSelect
+--- !u!114 &11474692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da118c471c870439ba0d96b02d51cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11483438
 MonoBehaviour:
   m_ObjectHideFlags: 1
