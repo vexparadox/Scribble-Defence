@@ -12,6 +12,7 @@ public class Drag : MonoBehaviour
 	private Vector3 curPosition; // holds the current world position of the mouse
 	public GameObject toSpawn; // this is the prefab which will spawn on mouseUp
 	private bool snapped = false; // checks whether the tower is in a place ready to go
+	public GameObject rangeCircle; //Holds the range circle
 
 	//snap to base variables
 	private float leastDistance;
@@ -69,7 +70,7 @@ public class Drag : MonoBehaviour
 		Vector3 curScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 		//use the above the current position of the mouse, in world coordinates
 		curPosition = Camera.main.ScreenToWorldPoint (curScreenPoint);
-
+		rangeCircle.transform.position = new Vector3 (curPosition.x, curPosition.y, 0);
 		//find the closest base to the mouse/tower(dragged)
 		leastDistance = Vector2.Distance(bases[0].transform.position,curPosition);
 		closerBase = 0;
@@ -96,6 +97,7 @@ public class Drag : MonoBehaviour
 
 	void OnMouseUp(){
 		//sort out some booleans
+		rangeCircle.transform.position = new Vector3 (-20, 0, 0);
 		grid.renderer.enabled = false; //disable the grid showing
 		transform.position = startPoint; // ping the tower back to it's UI start position
 		//make sure it's actually on a base before placing
