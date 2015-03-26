@@ -10,6 +10,7 @@ public class HardModeHandler : MonoBehaviour {
 		//if they've got to level 5, then activate hard mode
 		if (PlayerPrefs.GetInt ("LevelProgression") < 5) {
 			setLocked();
+			PlayerPrefs.SetInt("HardMode", 0);
 		} else if (PlayerPrefs.GetInt("HardMode") == 1) {
 			On = true;
 			setOn();
