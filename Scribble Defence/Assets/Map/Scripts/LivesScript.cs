@@ -49,7 +49,14 @@ public class LivesScript : MonoBehaviour {
 	void GameOver(){
 		if (Win) {
 			//get the level number and make add it to the progression
-			PlayerPrefs.SetInt ("LevelProgression", (CurrentLevel+1));
+			//only unlock the level if you're on the brink of your progression
+			if(CurrentLevel >= PlayerPrefs.GetInt("LevelProgression")){
+				Debug.Log("Level Unlocked");
+				PlayerPrefs.SetInt ("LevelProgression", (CurrentLevel + 1));
 			}
+				} else {
+			Debug.Log("Game Lost");
+			Time.timeScale = 0;
+				}
 	}
 }
