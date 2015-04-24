@@ -46,16 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GUI\Scripts\Interface.js" />
      <Compile Include="Assets\Map\Scripts\AssetController.js" />
      <Compile Include="Assets\Map\Scripts\EnemySpawnScript.js" />
      <Compile Include="Assets\Options\Scripts\OptionSceneController.js" />
      <Compile Include="Assets\Prefabs\Enemies\Scripts\HealthScript.js" />
      <Compile Include="Assets\Prefabs\Towers\Scripts\AmmoScript.js" />
+     <Compile Include="Assets\Prefabs\Towers\Scripts\TowerScript old.js" />
      <Compile Include="Assets\Prefabs\Towers\Scripts\TowerScript.js" />
      <Compile Include="Assets\Testing\MikesTestingThings\Money4Days.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity4.6/Unity4.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{A8B53B01-5015-31C9-48CF-12AAA17F5B4A}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

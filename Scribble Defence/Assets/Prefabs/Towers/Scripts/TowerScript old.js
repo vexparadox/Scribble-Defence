@@ -4,12 +4,6 @@ public var TowerAmmo:GameObject;
 public var Range = 90;
 public var Reload:float;
 var hasShot = false;
-public var isPlaced : boolean = false; // tells the Interface Script if the tower was placed or not
-public var towerLevel : int = 1;
-public var upgradeCost : int;
-public var attackDamage : float;
-public var aoeRange:float;
-public var towerDamageInc : int =1;
 
 
 
@@ -22,16 +16,7 @@ function Update () {
 }
 
 function Shoot(){
- 	
-	var clone : GameObject;
-  	clone = Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
-  	
-  	var bullet : AmmoScript;
- 	bullet = clone.GetComponent(AmmoScript);
-	bullet.attackDmg = attackDamage;
- 	bullet.aoe = aoeRange;
- 	
-
+ 	Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
 }
  
  function Turn(){
@@ -42,7 +27,6 @@ function Shoot(){
 	 }
  }
  function findNearest(){
- 	isPlaced = true;
  	var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy"); //Find all enemies
  	var CurrentShortestDist = 999999; // Set current distance to one stupidly high to ensure it doesn't fire on accident
  

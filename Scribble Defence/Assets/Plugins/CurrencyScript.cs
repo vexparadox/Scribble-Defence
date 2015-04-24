@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using System.Collections;
 
-
 public class CurrencyScript : MonoBehaviour {
 	public int CurrentCurrency; //the current currecny, this is updated throughout the game - can later be private
 	public int StartCurrency; // this is the start currency of the level
@@ -40,42 +39,54 @@ public class CurrencyScript : MonoBehaviour {
 		//last score is in top5 or not
 		if (counter == 0){
 			Debug.Log("This is the first time playing, Highscore = "+score);
-			PlayerPrefs.SetInt("Top1",0);
-			PlayerPrefs.SetInt("Top2",0);
-			PlayerPrefs.SetInt("Top3",0);
-			PlayerPrefs.SetInt("Top4",0);
-			PlayerPrefs.SetInt("Top5",0);
+
+			for(int i=1;i<6;i++){
+				PlayerPrefs.SetInt("Top"+i,0);
+				PlayerPrefs.SetString("Value"+i,"Nothing");
+			}
+			PlayerPrefs.SetString("LastLevelPlayed","NoLEvel");
+
+
 			
 		} else {
-			Debug.Log ("The last score was: " + PlayerPrefs.GetInt ("BestScore"+(counter-1)));
+			Debug.Log ("The last score was: " + PlayerPrefs.GetInt ("BestScore"));
 			
 			//if its bigger than the last then we see where the new score is in the top5
-			if(PlayerPrefs.GetInt("BestScore"+(counter-1)) > PlayerPrefs.GetInt("Top5")){
+			if(PlayerPrefs.GetInt("BestScore") > PlayerPrefs.GetInt("Top5")){
 				int i = 1;
-				while(PlayerPrefs.GetInt("BestScore"+(counter-1)) < PlayerPrefs.GetInt("Top"+i)){
+				while(PlayerPrefs.GetInt("BestScore") < PlayerPrefs.GetInt("Top"+i)){
+					
 					i++;
 				}
-				if(PlayerPrefs.GetInt("BestScore"+(counter-1)) > PlayerPrefs.GetInt("Top"+i)){
+				if(PlayerPrefs.GetInt("BestScore") >= PlayerPrefs.GetInt("Top"+i)){
 					int replaced = PlayerPrefs.GetInt("Top"+i);
-					PlayerPrefs.SetInt("Top"+i, PlayerPrefs.GetInt("BestScore"+(counter-1)) );
+					string stReplaced = PlayerPrefs.GetString("Value"+i);
+					PlayerPrefs.SetInt("Top"+i, PlayerPrefs.GetInt("BestScore") );
+
+					PlayerPrefs.SetString("Value"+i,PlayerPrefs.GetString("LastLevelPlayed"));
 					
 					while(replaced > PlayerPrefs.GetInt("Top"+(i+1)) && i<6){
 						int newReplaced = PlayerPrefs.GetInt("Top"+(i+1));
+						string newStReplaced = PlayerPrefs.GetString("Value"+(i+1));
 						PlayerPrefs.SetInt("Top"+(i+1), replaced);
+						PlayerPrefs.SetString("Value"+(i+1), stReplaced);
 						replaced = newReplaced;
+						stReplaced = newStReplaced;
 						i++;
 					}
 				}
 			}
+			
 			Debug.Log("The top 5 Highscores are: ");
 			
 			for(int i=1;i<6;i++){
 				
 				Debug.Log("Top "+(i)+" is "+PlayerPrefs.GetInt("Top"+i));
+				Debug.Log("Top Value "+(i)+" is "+PlayerPrefs.GetString("Value"+i));
 			}
 		}
 		
-		
+		/*
 		if (PlayerPrefs.HasKey("BestScore"+counter)) {
 			
 			score = PlayerPrefs.GetInt("BestScore"+counter);
@@ -85,18 +96,25 @@ public class CurrencyScript : MonoBehaviour {
 			PlayerPrefs.SetInt("BestScore"+counter, 0);
 			
 			
-		}
+		}*/
+
+		//always set BestScore to 0 because it stores the current score and starts with 0
+
+		PlayerPrefs.SetInt ("BestScore", 0);
 		
 		//PlayerPrefs.SetInt("HighScoreCurrency", 100);
 		CurrentCurrency = StartCurrency; //assign the start currency
 		//CurrentCurrency = PlayerPrefs.GetInt("HighScoreCurrency");
 		UpdateTextCookiesUI(); // update the TextUI to the current currency
-		//UpdateTextHighScore ();
+		UpdateTextHighScore ();
 		UpdateTextTowerCost();
 		counter++;
 		//Debug.Log ("The counter is " + counter);
 		PlayerPrefs.SetInt ("Counter", counter);
 		//Debug.Log ("The Counter PlayerPrefs is: " + PlayerPrefs.GetInt ("Counter"));
+
+
+		//int level = Application.loadedLevel;
 	}
 	
 	
@@ -113,21 +131,23 @@ public class CurrencyScript : MonoBehaviour {
 		
 		//we are looking at the current besyScore so we do counter-1 because after the start 
 		//function the counter is increased by 1
-		if (score > PlayerPrefs.GetInt("BestScore"+(counter-1))) {
+		if (score > PlayerPrefs.GetInt("BestScore")) {
 			//PlayerPrefs.SetInt("HighScore", score);
 			Debug.Log("Updated BestScore " + score);
-			PlayerPrefs.SetInt("BestScore"+(counter-1), score);
+			Debug.Log(Application.loadedLevelName);
+			PlayerPrefs.SetString("LastLevelPlayed",Application.loadedLevelName);
+			PlayerPrefs.SetInt("BestScore", score);
 			PlayerPrefs.Save();
 		}
 		
-		//UpdateTextHighScore();
+		UpdateTextHighScore();
 	}
 	void UpdateTextHighScore(){
-		HighScore.text = score.ToString();
+		//HighScore.text = score.ToString();
 		
 	}
 	
-	void UpdateTextCookiesUI(){
+	public void UpdateTextCookiesUI(){
 		// update the TextUI to the current currency
 		CurrencyLabel.text = CurrentCurrency.ToString();
 	}

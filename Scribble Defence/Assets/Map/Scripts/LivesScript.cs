@@ -52,7 +52,10 @@ public class LivesScript : MonoBehaviour {
 			//only unlock the level if you're on the brink of your progression
 			if(CurrentLevel >= PlayerPrefs.GetInt("LevelProgression")){
 				Debug.Log("Level Unlocked");
+				GameObject endScreen = GameObject.Find("endScreen");
+				endScreen.renderer.enabled = true;
 				PlayerPrefs.SetInt ("LevelProgression", (CurrentLevel + 1));
+				Application.LoadLevel("Level"+CurrentLevel+1);
 			}
 				} else {
 			Debug.Log("Game Lost");
