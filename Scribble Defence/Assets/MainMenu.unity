@@ -276,6 +276,7 @@ GameObject:
   - 212: {fileID: 472273590}
   - 95: {fileID: 472273589}
   - 61: {fileID: 472273587}
+  - 114: {fileID: 472273588}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -295,6 +296,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 8.25960541, y: 2.42963052}
   m_Center: {x: -.0380243436, y: .0768723637}
+--- !u!114 &472273588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472273586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: Tutorial
 --- !u!95 &472273589
 Animator:
   serializedVersion: 3
@@ -643,7 +656,6 @@ GameObject:
   - 95: {fileID: 1465632769}
   - 114: {fileID: 1465632773}
   - 61: {fileID: 1465632772}
-  - 114: {fileID: 1465632767}
   - 61: {fileID: 1465632768}
   m_Layer: 0
   m_Name: Play
@@ -652,18 +664,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1465632767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1465632766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: LevelSelect
 --- !u!61 &1465632768
 BoxCollider2D:
   m_ObjectHideFlags: 0
