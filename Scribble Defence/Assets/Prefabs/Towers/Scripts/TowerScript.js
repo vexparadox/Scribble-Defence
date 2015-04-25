@@ -10,6 +10,7 @@ public var upgradeCost : int;
 public var attackDamage : float;
 public var aoeRange:float;
 public var towerDamageInc : int =1;
+public var ID : int;
 
 
 
@@ -26,12 +27,11 @@ function Shoot(){
 	var clone : GameObject;
   	clone = Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
   	
+  	//set up the ammo's damage and AOE
   	var bullet : AmmoScript;
  	bullet = clone.GetComponent(AmmoScript);
 	bullet.attackDmg = attackDamage;
  	bullet.aoe = aoeRange;
- 	
-
 }
  
  function Turn(){

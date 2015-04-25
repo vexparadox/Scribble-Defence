@@ -16,7 +16,9 @@ private var isTower : boolean = false;
 private var x : int = 0;
 private var y : float;
 private var z : int =0;
-private var isLock : boolean = false;
+private var w :int = 0;
+
+private final var MAX_LEVEL :int = 5;
 
 function Start () {
     healthBar.gameObject.SetActive(false);
@@ -54,30 +56,58 @@ function Select(){			// this function selects the clicked target
 				x = tower.towerLevel;	// x, y and z are the variables to print those values on the upgrade menu
 				y = tower.attackDamage;
 				z = tower.upgradeCost;
+				w = tower.towerDamageInc;
 				TowerUpgradeUI();
 				towerUp.gameObject.SetActive(true);
 			}
-			else if(hit.transform.gameObject.tag == "Button"){	//if the button on the upgrade menu is clicked, this function is called
+			else if(hit.transform.gameObject.tag == "Delete" || hit.transform.gameObject.tag == "Button" ) {
+			
 				var gm = GameObject.FindGameObjectWithTag("GM");
 				var currency : CurrencyScript = gm.GetComponent(CurrencyScript);
-				isEnemy = false;
-				tower.towerLevel++;			//increases the tower level						
-				tower.attackDamage += tower.towerDamageInc;;	//increases the tower damage
 				
-				x = tower.towerLevel;
-				y = tower.attackDamage;
-				z = tower.upgradeCost;		//update the interface numbers
+				if(hit.transform.gameObject.tag == "Delete"){
+				
+					currency.CurrentCurrency += currency.TowerCost[tower.ID];
+					currency.UpdateTextCookiesUI();
+					Destroy(tower.gameObject);
+					
+				}
+				else if(hit.transform.gameObject.tag == "Button"){	//if the button on the upgrade menu is clicked, this function is called
+					
+					x = tower.towerLevel;
+					y = tower.attackDamage;
+					z = tower.upgradeCost*tower.towerLevel;//tower cost*tower level
+					w = tower.towerDamageInc;
+					//update the interface numbers
+					//max level of 5
+					if(x != MAX_LEVEL){
+						//can you afford it?
+						if(currency.CurrentCurrency >= z){
+						isEnemy = false;
+						tower.towerLevel++;			//increases the tower level						
+						tower.attackDamage += w;	//increases the tower damage
 
-				
-				currency.CurrentCurrency -= z;
-				currency.UpdateTextCookiesUI(); // updates current currency
-				
-				TowerUpgradeUI();
-				towerUp.gameObject.SetActive(true);		//shows the updated menu
-				//Debug.Log("level" + tower.towerLevel);
-				//Debug.Log("damage" + y);
-				
-			}
+						
+						currency.CurrentCurrency -= z;
+						currency.UpdateTextCookiesUI(); // updates current currency
+						
+						//update the interface numbers after any changes
+						x = tower.towerLevel;
+						y = tower.attackDamage;
+						z = tower.upgradeCost*tower.towerLevel;//tower cost*tower level
+
+						TowerUpgradeUI();
+						towerUp.gameObject.SetActive(true);		//shows the updated menu
+						//Debug.Log("level" + tower.towerLevel);
+						//Debug.Log("damage" + y);
+						}
+					}
+				}
+				} else{
+				//if it hits something in the UI but still registers a hit
+					towerUp.gameObject.SetActive(false);
+					healthBar.gameObject.SetActive(false);
+				}
 			}
 			else{
 				Debug.Log("No");		//if the user click in neither a tower or a enemy
@@ -94,9 +124,17 @@ function Select(){			// this function selects the clicked target
 
 public function TowerUpgradeUI(){		// refreshes the interface for the tower upgrade
 	if(tower.isPlaced){
-	towerText.text = "Tower Level: " + tower.towerLevel.ToString();		//shows the current level of the tower
-	damageText.text = "Damage: " + y.ToString();						//shows the current damage the tower inflicts
-	buttonText.text = "Upgrade " + "(" + z.ToString() + ")" ;			//shows the upgrade cost
+		//check for max level
+		if(tower.towerLevel == MAX_LEVEL){
+			towerText.text = "Max Level "+MAX_LEVEL.ToString();
+			buttonText.text = "No Upgrades" ;			//shows the upgrade cost
+
+		}else{
+			towerText.text = "Tower Level: " + tower.towerLevel.ToString();		//shows the current level of the tower
+				buttonText.text = "Upgrade +" + w + " (" + z.ToString() + " cookies)" ;			//shows the upgrade cost
+
+		}
+		damageText.text = "Damage: " + y.ToString();						//shows the current damage the tower inflicts
 	}
 }
 

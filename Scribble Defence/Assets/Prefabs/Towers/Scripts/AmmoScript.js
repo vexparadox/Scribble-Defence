@@ -1,9 +1,15 @@
 #pragma strict
 var CurrentShortestObject: Transform; //holds the closest objects transform
 public var bulletspeed: float; //holds the bullet speed
+
+//THESE ARE DO NOT WORK IF SET IN THE EDITOR, USE THE TOWERSCRIPT.JS TO SET DAMAGES
+@HideInInspector
 public var aoe : int; // holds AOE range on towers * is now on Tower Script
-private var onscreen:boolean; //if the bullets are onscreen or not
+@HideInInspector
+public var onscreen:boolean; //if the bullets are onscreen or not
+@HideInInspector
 public var towerLevel: int;	//holds the tower level
+@HideInInspector
 public var attackDmg : float;//attack damage is now stored in the TowerScript
 
 function Start () {

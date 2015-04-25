@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11471882}
   - 50: {fileID: 5071882}
   - 61: {fileID: 6171882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tower2Ammo
   m_TagString: Bomb
   m_Icon: {fileID: 0}
@@ -70,8 +70,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
   bulletspeed: 400
-  attackDamage: 10
-  aoeRange: 2
+  aoe: 3
+  towerLevel: 0
+  attackDmg: 10
 --- !u!212 &21271882
 SpriteRenderer:
   m_ObjectHideFlags: 1

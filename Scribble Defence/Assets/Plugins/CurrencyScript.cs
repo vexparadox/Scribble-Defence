@@ -26,7 +26,7 @@ public class CurrencyScript : MonoBehaviour {
 	public Text HighScore;
 	
 	void Start(){
-		Debug.Log ("Chegou start");
+
 		//PlayerPrefs.DeleteAll ();
 		if (PlayerPrefs.HasKey ("Counter")) {
 			counter = PlayerPrefs.GetInt ("Counter");

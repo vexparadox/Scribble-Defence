@@ -9,10 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 473090}
   - 212: {fileID: 21273090}
-  - 114: {fileID: 11473090}
-  m_Layer: 0
+  - 114: {fileID: 11418102}
+  - 58: {fileID: 5887024}
+  m_Layer: 11
   m_Name: tower4Place
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11473090
+--- !u!58 &5887024
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173090}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0}
+--- !u!114 &11418102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -37,14 +49,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 173090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96b14e57a4898884784e99c79020bcd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 41556d30970404aa796a636ba95a1bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
   TowerAmmo: {fileID: 182566, guid: 0acb4bca16d2241baaea91c2f7d3668b, type: 2}
-  Range: 1000
-  Reload: 10
+  Range: 90
+  Reload: 0
   hasShot: 0
+  isPlaced: 0
+  towerLevel: 1
+  upgradeCost: 200
+  attackDamage: 75
+  aoeRange: 0
+  towerDamageInc: 25
+  ID: 3
 --- !u!212 &21273090
 SpriteRenderer:
   m_ObjectHideFlags: 1

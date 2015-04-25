@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11468856}
   - 50: {fileID: 5068856}
   - 61: {fileID: 6168856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tower3Ammo
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -70,8 +70,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
   bulletspeed: 450
-  attackDamage: 2
-  aoeRange: 0
+  aoe: 0
+  towerLevel: 0
+  attackDmg: 0
 --- !u!212 &21268856
 SpriteRenderer:
   m_ObjectHideFlags: 1
