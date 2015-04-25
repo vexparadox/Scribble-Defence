@@ -2357,6 +2357,8 @@ MonoBehaviour:
   CurrentLives: 0
   CurrentLevel: 1
   LivesLabel: {fileID: 915353533}
+  endSkin: {fileID: 11400000, guid: 89af3133db612a54aaaec27f7bf63098, type: 2}
+  nextLevel: 
   gameover: 0
 --- !u!114 &638682525
 MonoBehaviour:
