@@ -47,13 +47,13 @@ public class LivesScript : MonoBehaviour {
 	//passed from EnemySpawnScript.JS
 	public void levelWon(){
 		Win = true;
+		gameover = true;
 		GameOver();
 	}
 
 	//on each frame check for game over(GUI VERSION)
 	void OnGUI(){
 		GUI.skin = endSkin;
-		{
 			if(gameover)
 			{	
 				//stop the enemies etc moving whilst the end screen is up
@@ -61,7 +61,6 @@ public class LivesScript : MonoBehaviour {
 				//load endscreen
 				windowRect = GUILayout.Window(0, windowRect, endScreen, "");
 			}
-		}
 	}
 
 	//show the endscreen window
