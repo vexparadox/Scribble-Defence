@@ -55,7 +55,7 @@ MonoBehaviour:
   CurrentShortestObject: {fileID: 0}
   TowerAmmo: {fileID: 171882, guid: 9332e36e6fce34df6925972a7e152b12, type: 2}
   Range: 100
-  Reload: 1
+  Reload: 5
   hasShot: 0
   isPlaced: 0
   towerLevel: 1

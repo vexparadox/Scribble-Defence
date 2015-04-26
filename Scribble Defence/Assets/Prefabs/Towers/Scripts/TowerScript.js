@@ -23,7 +23,7 @@ function Update () {
 }
 
 function Shoot(){
- 	
+ 	audio.Play();
 	var clone : GameObject;
   	clone = Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
   	
