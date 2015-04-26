@@ -38,6 +38,7 @@ public class LivesScript : MonoBehaviour {
 		if (CurrentLives <= 0) {
 			endMessage = "You ran out of lives! :(";
 			Win = false;
+			gameover = true;
 			GameOver();
 				}
 		LivesLabel.text = CurrentLives.ToString();

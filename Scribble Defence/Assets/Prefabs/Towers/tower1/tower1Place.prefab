@@ -50,7 +50,7 @@ AudioSource:
   m_GameObject: {fileID: 152012}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: cefff12c5aa90f545bb1d9d38b5b548b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea1538c9fd44dc4499e5940861366534, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentShortestObject: {fileID: 0}
   TowerAmmo: {fileID: 138584, guid: 454d464571e63bb43b11eca1d0fa9826, type: 2}
-  Range: 90
-  Reload: 3
+  Range: 3
+  Reload: 1.5
   hasShot: 0
   isPlaced: 0
   towerLevel: 1
