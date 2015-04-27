@@ -6,7 +6,6 @@ public class LevelLocker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int progression = PlayerPrefs.GetInt ("LevelProgression");
-		Debug.Log (progression);
 		//turns the padlocks on and off depending on how they're doing
 		if (progression >= 2) {
 			level2lock.GetComponent<SpriteRenderer>().enabled = false;

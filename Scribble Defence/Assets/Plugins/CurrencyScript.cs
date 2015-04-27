@@ -38,8 +38,6 @@ public class CurrencyScript : MonoBehaviour {
 		//if its the first time we create the keys with the top5 otherwise we see whether the
 		//last score is in top5 or not
 		if (counter == 0){
-			Debug.Log("This is the first time playing, Highscore = "+score);
-
 			for(int i=1;i<6;i++){
 				PlayerPrefs.SetInt("Top"+i,0);
 				PlayerPrefs.SetString("Value"+i,"Nothing");
@@ -49,8 +47,6 @@ public class CurrencyScript : MonoBehaviour {
 
 			
 		} else {
-			Debug.Log ("The last score was: " + PlayerPrefs.GetInt ("BestScore"));
-			
 			//if its bigger than the last then we see where the new score is in the top5
 			if(PlayerPrefs.GetInt("BestScore") > PlayerPrefs.GetInt("Top5")){
 				int i = 1;
@@ -75,14 +71,6 @@ public class CurrencyScript : MonoBehaviour {
 						i++;
 					}
 				}
-			}
-			
-			Debug.Log("The top 5 Highscores are: ");
-			
-			for(int i=1;i<6;i++){
-				
-				Debug.Log("Top "+(i)+" is "+PlayerPrefs.GetInt("Top"+i));
-				Debug.Log("Top Value "+(i)+" is "+PlayerPrefs.GetString("Value"+i));
 			}
 		}
 		
@@ -109,12 +97,7 @@ public class CurrencyScript : MonoBehaviour {
 		UpdateTextHighScore ();
 		UpdateTextTowerCost();
 		counter++;
-		//Debug.Log ("The counter is " + counter);
 		PlayerPrefs.SetInt ("Counter", counter);
-		//Debug.Log ("The Counter PlayerPrefs is: " + PlayerPrefs.GetInt ("Counter"));
-
-
-		//int level = Application.loadedLevel;
 	}
 	
 	
@@ -133,8 +116,6 @@ public class CurrencyScript : MonoBehaviour {
 		//function the counter is increased by 1
 		if (score > PlayerPrefs.GetInt("BestScore")) {
 			//PlayerPrefs.SetInt("HighScore", score);
-			Debug.Log("Updated BestScore " + score);
-			Debug.Log(Application.loadedLevelName);
 			PlayerPrefs.SetString("LastLevelPlayed",Application.loadedLevelName);
 			PlayerPrefs.SetInt("BestScore", score);
 			PlayerPrefs.Save();
