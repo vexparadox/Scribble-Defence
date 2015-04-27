@@ -1,28 +1,38 @@
 ﻿#pragma strict
 
+//holds more interface UI things
 private var health : HealthScript;
 public var visualHealth : UnityEngine.UI.Image;
 private var currentXValue : float;
 public var healthBar : GameObject;
+//does the click hit anything?
 private var hit : RaycastHit2D;
+//if it's an enenmy
 private var isEnemy: boolean = false;
+//the enemy values
 private var healthAmount : float;
 public var towerUp : GameObject;
+//upgrade and selling interface 
 public var towerText : Text;
 public var buttonText : Text;
 public var damageText : Text;
+//holds a the tower clicked to get variables
 private var tower : TowerScript;
 private var isTower : boolean = false;
+//holds the variables from said clicked tower
 private var x : int = 0;
 private var y : float;
 private var z : int =0;
 private var w :int = 0;
+//bases
+private var gameMaster : GameObject;
 
 private final var MAX_LEVEL :int = 5;
 
 function Start () {
     healthBar.gameObject.SetActive(false);
     towerUp.gameObject.SetActive(false);
+    gameMaster = GameObject.Find("_GM");
 }
 
 function Update () {
@@ -57,8 +67,8 @@ function Select(){			// this function selects the clicked target
 				y = tower.attackDamage;
 				z = tower.upgradeCost;
 				w = tower.towerDamageInc;
-				towerUp.gameObject.SetActive(true);
 				TowerUpgradeUI();
+				towerUp.gameObject.SetActive(true);
 
 			}
 			else if(hit.transform.gameObject.tag == "Delete" || hit.transform.gameObject.tag == "Button" ) {
@@ -67,10 +77,13 @@ function Select(){			// this function selects the clicked target
 				var currency : CurrencyScript = gm.GetComponent(CurrencyScript);
 				
 				if(hit.transform.gameObject.tag == "Delete"){
-				
+					var baseID = tower.baseID;
+					gameMaster.SendMessage("Baseempty", baseID);
 					currency.CurrentCurrency += currency.TowerCost[tower.ID];
 					currency.UpdateTextCookiesUI();
 					Destroy(tower.gameObject);
+					towerUp.gameObject.SetActive(false);
+
 					
 				}
 				else if(hit.transform.gameObject.tag == "Button"){	//if the button on the upgrade menu is clicked, this function is called

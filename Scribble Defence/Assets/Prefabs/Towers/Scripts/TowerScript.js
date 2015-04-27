@@ -5,12 +5,14 @@ public var Range = 90;
 public var Reload:float;
 var hasShot = false;
 public var isPlaced : boolean = false; // tells the Interface Script if the tower was placed or not
+//tower variables
 public var towerLevel : int = 1;
 public var upgradeCost : int;
 public var attackDamage : float;
 public var aoeRange:float;
 public var towerDamageInc : int =1;
 public var ID : int;
+public var baseID : int;
 
 
 
@@ -69,3 +71,7 @@ function Shoot(){
 		}
 	}
 } 
+//gets the base the tower is currently on
+function setBase(base:int){
+	baseID = base;
+}
