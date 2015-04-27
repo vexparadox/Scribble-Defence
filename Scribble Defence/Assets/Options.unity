@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &93748933
 GameObject:
@@ -634,7 +635,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 21a3d423c7948cd4ea7e1f324d735af7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -692,7 +693,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: a96e1800c86b26b41bf64d27ce56b78f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .25
   m_Pitch: 1
   Loop: 1
@@ -750,7 +751,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1844283433}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1138191472
@@ -1008,6 +1010,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSprite: {fileID: 21300000, guid: 4a858bd13725041bca081803839effab, type: 3}
   onSprite: {fileID: 21300000, guid: 083b12489b07b43d4839b73d82911362, type: 3}
+  clip1: {fileID: 8300000, guid: 21a3d423c7948cd4ea7e1f324d735af7, type: 3}
+  audio: {fileID: 1084477554}
+  valueFX: 0
 --- !u!61 &1279732828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1203,6 +1208,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1844283430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1844283433}
+  - 82: {fileID: 1844283432}
+  - 114: {fileID: 1844283431}
+  m_Layer: 0
+  m_Name: PaperSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1844283431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844283430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ff2f94b72ab6a4e810805e8123dd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1844283432}
+  clip: {fileID: 8300000, guid: 21a3d423c7948cd4ea7e1f324d735af7, type: 3}
+--- !u!82 &1844283432
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844283430}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 21a3d423c7948cd4ea7e1f324d735af7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1844283433
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844283430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1084477555}
+  m_RootOrder: 0
 --- !u!1 &1862051411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1467,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSprite: {fileID: 21300000, guid: 4a858bd13725041bca081803839effab, type: 3}
   onSprite: {fileID: 21300000, guid: 083b12489b07b43d4839b73d82911362, type: 3}
+  clip1: {fileID: 8300000, guid: a96e1800c86b26b41bf64d27ce56b78f, type: 3}
+  audio: {fileID: 1084477554}
 --- !u!61 &2106246980
 BoxCollider2D:
   m_ObjectHideFlags: 0

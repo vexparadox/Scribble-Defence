@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11469350}
   - 114: {fileID: 11491328}
   - 82: {fileID: 8202642}
+  - 114: {fileID: 11408502}
   m_Layer: 0
   m_Name: bossPrefab
   m_TagString: Enemy
@@ -53,7 +54,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: a9df185658c427d46ab57c3e3069d093, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .75
   m_Pitch: 1
   Loop: 0
@@ -117,6 +118,19 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11408502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d73d87d7a6a04ed4a7471f63560f1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8202642}
+  sound: {fileID: 8300000, guid: a9df185658c427d46ab57c3e3069d093, type: 3}
 --- !u!114 &11469350
 MonoBehaviour:
   m_ObjectHideFlags: 1

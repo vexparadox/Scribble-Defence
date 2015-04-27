@@ -23,7 +23,10 @@ function Update () {
 }
 
 function Shoot(){
- 	audio.Play();
+	//only play sounds if the soundFX's have been turned on
+	if(PlayerPrefs.GetInt("SoundFX") == 1){
+ 		audio.Play();
+ 	}
 	var clone : GameObject;
   	clone = Instantiate(TowerAmmo, transform.localPosition, Quaternion.identity); //Create bullet
   	
