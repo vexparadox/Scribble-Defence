@@ -1466,7 +1466,6 @@ GameObject:
   - 212: {fileID: 387950821}
   - 61: {fileID: 387950820}
   - 114: {fileID: 387950819}
-  - 114: {fileID: 387950822}
   - 114: {fileID: 387950823}
   m_Layer: 0
   m_Name: SettingsButton
@@ -1499,6 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed31f9e2bd7442da936a9e46315f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseSkin: {fileID: 11400000, guid: 1568fc449f1f64dc484292e5ff0426bc, type: 2}
 --- !u!61 &387950820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1534,19 +1534,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 84aa474ef66aa4583b0d6431897c2d51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &387950822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11439042, guid: ef8e41d5448cb4ea0bfe7d3b587a3a0d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1806709254}
-  m_GameObject: {fileID: 387950817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec27c0fdb6cd3a449ae42429f98b0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: LevelSelect
 --- !u!114 &387950823
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,8 @@ public class AudioHandler : MonoBehaviour {
 	public int valueFX;
 	// Use this for initialization
 	void Start () {
-		
+
+		//if sound is turned on, play the music
 		valueFX = PlayerPrefs.GetInt("SoundFX");
 		if (PlayerPrefs.GetInt ("Sound") == 1) 
 			playOnce = true;

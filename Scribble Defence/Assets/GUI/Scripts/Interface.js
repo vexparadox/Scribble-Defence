@@ -110,7 +110,6 @@ function Select(){			// this function selects the clicked target
 				}
 			}
 			else{
-				Debug.Log("No");		//if the user click in neither a tower or a enemy
 			    isEnemy = false;
 			    isTower = false;		// the upgrade interface and the health bar are hidden
 			    healthBar.gameObject.SetActive(false);
