@@ -1498,7 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed31f9e2bd7442da936a9e46315f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseSkin: {fileID: 11400000, guid: 1568fc449f1f64dc484292e5ff0426bc, type: 2}
+  pauseSkin: {fileID: 11400000, guid: 89af3133db612a54aaaec27f7bf63098, type: 2}
 --- !u!61 &387950820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5738,6 +5738,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11483438, guid: ef8e41d5448cb4ea0bfe7d3b587a3a0d, type: 2}
+      propertyPath: pauseSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: 89af3133db612a54aaaec27f7bf63098,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef8e41d5448cb4ea0bfe7d3b587a3a0d, type: 2}
   m_RootGameObject: {fileID: 387950817}

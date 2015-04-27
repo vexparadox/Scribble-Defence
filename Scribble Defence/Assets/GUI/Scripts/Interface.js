@@ -57,8 +57,9 @@ function Select(){			// this function selects the clicked target
 				y = tower.attackDamage;
 				z = tower.upgradeCost;
 				w = tower.towerDamageInc;
-				TowerUpgradeUI();
 				towerUp.gameObject.SetActive(true);
+				TowerUpgradeUI();
+
 			}
 			else if(hit.transform.gameObject.tag == "Delete" || hit.transform.gameObject.tag == "Button" ) {
 			
@@ -130,7 +131,7 @@ public function TowerUpgradeUI(){		// refreshes the interface for the tower upgr
 
 		}else{
 			towerText.text = "Tower Level: " + tower.towerLevel.ToString();		//shows the current level of the tower
-				buttonText.text = "Upgrade +" + w + " (" + z.ToString() + " cookies)" ;			//shows the upgrade cost
+			buttonText.text = "Upgrade +" + w + " (" + z.ToString() + " cookies)" ;			//shows the upgrade cost
 
 		}
 		damageText.text = "Damage: " + y.ToString();						//shows the current damage the tower inflicts
