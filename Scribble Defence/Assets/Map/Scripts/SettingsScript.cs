@@ -18,9 +18,8 @@ public class SettingsScript : MonoBehaviour {
 		} else {
 			//do nothing, they must press resume to continue the game
 		}
+		pauseMenu = true;
 
-		//flip the boolean
-		pauseMenu = !pauseMenu;
 	}
 
 	// Update is called once per frame
