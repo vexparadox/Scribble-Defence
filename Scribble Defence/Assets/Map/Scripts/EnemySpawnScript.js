@@ -175,7 +175,7 @@ function checkForRoundEnd(){
 	totalEnemiesThisWave == 0){
 	
 		roundOver = true; // stop more spawning
-		if (currentWave != numberOfWaves){ // if it's not the last wave
+		if (currentWave+1 != numberOfWaves){ // if it's not the last wave
 			currentWave++; //advance a wave
 			totalEnemiesThisWave = gruntsPerWave[currentWave] + tanksPerWave[currentWave] + speedPerWave[currentWave] + bossPerWave[currentWave]; //get new total enemies
 			//wipe current enemy array, this allows more spawning
@@ -188,8 +188,10 @@ function checkForRoundEnd(){
 			updateUI();
 			Debug.Log("New wave");
 		} else{
-			//level won 
-			_GM.SendMessage("levelWon");
+			//level won
+			waveTextLabel.text = "Completed!";
+			Time.timeScale = 0;
+			_GM.SendMessage("levelWon"); //start out the new level
 		}
 	}
 }
