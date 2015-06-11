@@ -118,11 +118,12 @@ MonoBehaviour:
   hasShot: 0
   isPlaced: 0
   towerLevel: 1
-  upgradeCost: 75
-  attackDamage: 30
+  upgradeCost: 100
+  attackDamage: 20
   aoeRange: 2
-  towerDamageInc: 20
+  towerDamageInc: 10
   ID: 2
+  baseID: 0
 --- !u!212 &21249638
 SpriteRenderer:
   m_ObjectHideFlags: 1

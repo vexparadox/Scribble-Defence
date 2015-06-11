@@ -47,8 +47,6 @@ public class Drag : MonoBehaviour
 			}
 		}
 
-
-
 		//find the GM
 		GameObject Temp;
 		Temp = GameObject.Find ("_GM");
@@ -57,8 +55,7 @@ public class Drag : MonoBehaviour
 	}
 
 	void OnMouseDown()
-	{	
-
+	{
 		//make sure it's not paused
 		if (Time.timeScale != 0) {
 			grid.renderer.enabled = true;
