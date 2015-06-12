@@ -2437,7 +2437,7 @@ MonoBehaviour:
   StartCurrency: 200
   score: 0
   top5Scores: 
-  EnemyWorth: 0a0000000f0000000500000064000000
+  EnemyWorth: 050000000a0000000200000032000000
   TowerCost: 3200000064000000fa00000090010000
   CurrencyLabel: {fileID: 1116105969}
   TowerCostLabel:

@@ -108,7 +108,7 @@ public class CurrencyScript : MonoBehaviour {
 		//enemy worth is defined publically in the _GM game object
 		CurrentCurrency += EnemyWorth[EnemyID]; 
 		
-		score += EnemyWorth [EnemyID];
+		score += EnemyWorth[EnemyID];
 		
 		UpdateTextCookiesUI(); // update the TextUI to the current currency
 		

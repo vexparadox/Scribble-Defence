@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿	#pragma strict
 	public var startingHealth:int; //holds the maximum health it can have
 	public var currentHealth:float; // holds current health
 	public var maxHealth : float; // holds maximum health, this changes throughout the waves
@@ -23,15 +23,15 @@ function Start () {
 	currentWaveNumber = _GM.GetComponent(EnemySpawnScript).currentWave; //get the wave number
 	maxHealth = startingHealth + (waveModifier*currentWaveNumber); //initiate health and add the wave modifier
 	currentHealth = maxHealth;
-
 }
+
 function Update () {
 //if he's dead, kill him
-		if (currentHealth <= 0) {
-			isDead = true;
-			Destroy(gameObject);
-			_GM.SendMessage("deadCash", enemyID);
-			_GM.SendMessage("enemyDead");
+	if (currentHealth <= 0) {
+		isDead = true;
+		Destroy(gameObject);	
+		_GM.SendMessage("deadCash", enemyID);
+		_GM.SendMessage("enemyDead");
 		}
 }
 
