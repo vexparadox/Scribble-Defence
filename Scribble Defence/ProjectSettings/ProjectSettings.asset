@@ -71,8 +71,8 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 6248f41734e1a42ae84e8468b9074ed9
-  iPhoneBundleVersion: 1.4.3
-  AndroidBundleVersionCode: 25
+  iPhoneBundleVersion: 1.4.5
+  AndroidBundleVersionCode: 26
   AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -103,7 +103,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/William Meaton/Documents/GitHub/CreativeProject-GP3/user.keystore
+  AndroidKeystoreName: /Users/williammeaton/Documents/GitHub/CreativeProject-GP3/user.keystore
   AndroidKeyaliasName: scribble defence
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:

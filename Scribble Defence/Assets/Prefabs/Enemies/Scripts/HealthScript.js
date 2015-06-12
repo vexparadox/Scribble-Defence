@@ -2,6 +2,7 @@
 	public var startingHealth:int; //holds the maximum health it can have
 	public var currentHealth:float; // holds current health
 	public var maxHealth : float; // holds maximum health, this changes throughout the waves
+	public var worth : int; // holds how much the enemy is worth in cookies
 	private var waveModifier:int = 15; // holds by how much the health increases each wave
 	private var aoe:int; //area of effect
 	public var isDead : boolean = false;	// tells the Interface script if the enemy is dead or not
@@ -30,7 +31,7 @@ function Update () {
 	if (currentHealth <= 0) {
 		isDead = true;
 		Destroy(gameObject);	
-		_GM.SendMessage("deadCash", enemyID);
+		_GM.SendMessage("deadCash", worth);
 		_GM.SendMessage("enemyDead");
 		}
 }
@@ -49,17 +50,15 @@ function OnCollisionEnter2D(collider: Collision2D)
 			Destroy(collider.gameObject); // destroy the bullet on contact
 			if (currentHealth > 0)
 			{	
-
 				updateHealth(ammo.attackDmg); //take the set amount of damage away from the health
 			}
 		}
-		else if(collider.gameObject.tag == "Bomb") // if hit by a bomb
+		else if(collider.gameObject.tag == "Bomb") // if hit by a bomb/AOE bullet
 		{
 
 			if (currentHealth > 0 )
 			{	
 				aoe = ammo.aoe;
-			
 				var damagedEnemies : HealthScript;			
 				
 				var EnemyFinder = GameObject.FindGameObjectsWithTag("Enemy");
@@ -68,8 +67,8 @@ function OnCollisionEnter2D(collider: Collision2D)
   					var Enemy = EnemyFinder[i].transform.position;
  					var Distance= Vector2.Distance(Enemy, collider.transform.position); 	
  					   	if(Distance<=aoe){
-  						 damagedEnemies = EnemyFinder[i].gameObject.GetComponent(HealthScript);
-  						 damagedEnemies.updateHealth(ammo.attackDmg);
+  						 damagedEnemies = EnemyFinder[i].gameObject.GetComponent(HealthScript); //find the health of the enemy
+  						 damagedEnemies.updateHealth(ammo.attackDmg/2); //do an AOE damage of half of the attack
     				}
     			}
 			}

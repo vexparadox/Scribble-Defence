@@ -70,7 +70,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
-  health: 0
+  currentHealth: 0
+  maxHealth: 0
+  worth: 2
+  isDead: 0
   enemyID: 2
 --- !u!114 &11476118
 MonoBehaviour:

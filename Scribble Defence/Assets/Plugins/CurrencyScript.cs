@@ -10,14 +10,6 @@ public class CurrencyScript : MonoBehaviour {
 	public int score = 0;
 	public static int counter = 0;
 	public int[] top5Scores;
-	
-	public int[] EnemyWorth = new int[4]; // this is how much the user gets for each enemy kill
-	/*Elements
-	0 = Grunt
-	1 = Tank
-	2 = Speedy
-	3 = Boss
-	 */
 	public int[] TowerCost = new int[4]; // this is how much each tower costs to place, element 0 = tower 1 etc.
 	public Text CurrencyLabel; // this is the Text object that holds the currecny label
 	public Text[] TowerCostLabel = new Text[4];
@@ -73,42 +65,22 @@ public class CurrencyScript : MonoBehaviour {
 				}
 			}
 		}
-		
-		/*
-		if (PlayerPrefs.HasKey("BestScore"+counter)) {
-			
-			score = PlayerPrefs.GetInt("BestScore"+counter);
-			Debug.Log(score);
-			
-		} else {
-			PlayerPrefs.SetInt("BestScore"+counter, 0);
-			
-			
-		}*/
-
-		//always set BestScore to 0 because it stores the current score and starts with 0
-
 		PlayerPrefs.SetInt ("BestScore", 0);
-		
 		//PlayerPrefs.SetInt("HighScoreCurrency", 100);
 		CurrentCurrency = StartCurrency; //assign the start currency
 		//CurrentCurrency = PlayerPrefs.GetInt("HighScoreCurrency");
 		UpdateTextCookiesUI(); // update the TextUI to the current currency
-		UpdateTextHighScore ();
 		UpdateTextTowerCost();
 		counter++;
 		PlayerPrefs.SetInt ("Counter", counter);
 	}
 	
 	
+
 	
-	
-	void deadCash(int EnemyID){
-		//depending on what enemy is killed, add their worth to the currency
-		//enemy worth is defined publically in the _GM game object
-		CurrentCurrency += EnemyWorth[EnemyID]; 
-		
-		score += EnemyWorth[EnemyID];
+	public void deadCash(int enemyWorth){
+		//the enemyWorth is passed into the function, this is then added to the overall currency
+		CurrentCurrency += enemyWorth;
 		
 		UpdateTextCookiesUI(); // update the TextUI to the current currency
 		
@@ -120,12 +92,6 @@ public class CurrencyScript : MonoBehaviour {
 			PlayerPrefs.SetInt("BestScore", score);
 			PlayerPrefs.Save();
 		}
-		
-		UpdateTextHighScore();
-	}
-	void UpdateTextHighScore(){
-		//HighScore.text = score.ToString();
-		
 	}
 	
 	public void UpdateTextCookiesUI(){

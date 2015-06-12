@@ -167,6 +167,7 @@ MonoBehaviour:
   startingHealth: 1200
   currentHealth: 0
   maxHealth: 0
+  worth: 50
   isDead: 0
   enemyID: 3
 --- !u!212 &21236688
