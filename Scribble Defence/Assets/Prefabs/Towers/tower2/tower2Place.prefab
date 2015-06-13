@@ -12,6 +12,7 @@ GameObject:
   - 58: {fileID: 5854902}
   - 114: {fileID: 11445914}
   - 82: {fileID: 8229958}
+  - 114: {fileID: 11419024}
   m_Layer: 11
   m_Name: tower2Place
   m_TagString: Tower
@@ -100,6 +101,29 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11419024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add0734e4ade34aa29141d88fdb03780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerAmmo: {fileID: 171882, guid: 9332e36e6fce34df6925972a7e152b12, type: 2}
+  Range: 3
+  Reload: 2.5
+  hasShot: 0
+  isPlaced: 0
+  towerLevel: 1
+  upgradeCost: 100
+  attackDamage: 20
+  aoeRange: 2
+  towerDamageInc: 10
+  ID: 2
+  baseID: 0
 --- !u!114 &11445914
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,7 +12,7 @@ GameObject:
   - 95: {fileID: 9505528}
   - 58: {fileID: 5824288}
   - 114: {fileID: 11476118}
-  - 114: {fileID: 11416560}
+  - 114: {fileID: 11404088}
   m_Layer: 0
   m_Name: speedPrefab
   m_TagString: Enemy
@@ -58,7 +58,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11416560
+--- !u!114 &11404088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,15 +66,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 105528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8586e344c84f84986beb4c6a874c73ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 41eaea85ea85c4be7ba49b5b07132410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
+  worth: 2
+  enemyID: 2
   currentHealth: 0
   maxHealth: 0
-  worth: 2
-  isDead: 0
-  enemyID: 2
 --- !u!114 &11476118
 MonoBehaviour:
   m_ObjectHideFlags: 1

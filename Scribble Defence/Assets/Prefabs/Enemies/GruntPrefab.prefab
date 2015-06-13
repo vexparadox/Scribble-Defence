@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21224216}
   - 95: {fileID: 9524216}
   - 114: {fileID: 11479812}
-  - 114: {fileID: 11436618}
   - 61: {fileID: 6193562}
+  - 114: {fileID: 11436898}
   m_Layer: 0
   m_Name: GruntPrefab
   m_TagString: Enemy
@@ -58,7 +58,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11436618
+--- !u!114 &11436898
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,15 +66,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 124216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8586e344c84f84986beb4c6a874c73ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 41eaea85ea85c4be7ba49b5b07132410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 45
+  worth: 5
+  enemyID: 0
   currentHealth: 0
   maxHealth: 0
-  worth: 5
-  isDead: 0
-  enemyID: 0
 --- !u!114 &11479812
 MonoBehaviour:
   m_ObjectHideFlags: 1

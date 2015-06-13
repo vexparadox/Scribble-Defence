@@ -12,9 +12,9 @@ GameObject:
   - 95: {fileID: 9536688}
   - 58: {fileID: 5847292}
   - 114: {fileID: 11469350}
-  - 114: {fileID: 11491328}
   - 82: {fileID: 8202642}
   - 114: {fileID: 11408502}
+  - 114: {fileID: 11459506}
   m_Layer: 0
   m_Name: bossPrefab
   m_TagString: Enemy
@@ -131,6 +131,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 8202642}
   sound: {fileID: 8300000, guid: a9df185658c427d46ab57c3e3069d093, type: 3}
+--- !u!114 &11459506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41eaea85ea85c4be7ba49b5b07132410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1200
+  worth: 50
+  enemyID: 3
+  currentHealth: 0
+  maxHealth: 0
 --- !u!114 &11469350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,23 +169,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &11491328
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8586e344c84f84986beb4c6a874c73ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 1200
-  currentHealth: 0
-  maxHealth: 0
-  worth: 50
-  isDead: 0
-  enemyID: 3
 --- !u!212 &21236688
 SpriteRenderer:
   m_ObjectHideFlags: 1

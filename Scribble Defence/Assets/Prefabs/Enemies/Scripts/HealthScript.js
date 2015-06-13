@@ -3,6 +3,7 @@
 	public var currentHealth:float; // holds current health
 	public var maxHealth : float; // holds maximum health, this changes throughout the waves
 	public var worth : int; // holds how much the enemy is worth in cookies
+	
 	private var waveModifier:int = 15; // holds by how much the health increases each wave
 	private var aoe:int; //area of effect
 	public var isDead : boolean = false;	// tells the Interface script if the enemy is dead or not
@@ -27,7 +28,7 @@ function Start () {
 }
 
 function Update () {
-//if he's dead, kill him
+	//if he's dead, kill him
 	if (currentHealth <= 0) {
 		isDead = true;
 		Destroy(gameObject);	

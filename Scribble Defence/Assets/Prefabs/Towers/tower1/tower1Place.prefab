@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 452012}
   - 212: {fileID: 21228236}
-  - 114: {fileID: 11460886}
   - 58: {fileID: 5869492}
   - 82: {fileID: 8233676}
+  - 114: {fileID: 11448618}
   m_Layer: 11
   m_Name: tower1Place
   m_TagString: Tower
@@ -100,7 +100,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11460886
+--- !u!114 &11448618
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,10 +108,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 152012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41556d30970404aa796a636ba95a1bae, type: 3}
+  m_Script: {fileID: 11500000, guid: add0734e4ade34aa29141d88fdb03780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentShortestObject: {fileID: 0}
   TowerAmmo: {fileID: 138584, guid: 454d464571e63bb43b11eca1d0fa9826, type: 2}
   Range: 3
   Reload: 1.5
@@ -123,6 +122,7 @@ MonoBehaviour:
   aoeRange: 0
   towerDamageInc: 5
   ID: 0
+  baseID: 0
 --- !u!212 &21228236
 SpriteRenderer:
   m_ObjectHideFlags: 1

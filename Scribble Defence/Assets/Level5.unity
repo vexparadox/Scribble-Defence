@@ -2307,7 +2307,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 638682521}
-  - 114: {fileID: 638682520}
   - 114: {fileID: 638682522}
   - 114: {fileID: 638682523}
   - 114: {fileID: 638682524}
@@ -2316,6 +2315,7 @@ GameObject:
   - 82: {fileID: 638682528}
   - 82: {fileID: 638682527}
   - 114: {fileID: 638682529}
+  - 114: {fileID: 638682520}
   m_Layer: 0
   m_Name: _GM
   m_TagString: GM
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 638682519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f5579afc20ddc4cb8a9fb5dca17548, type: 3}
+  m_Script: {fileID: 11500000, guid: b82f43784013f4d278c08bb567fe4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyParentObject: {fileID: 531989515}
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   tankEnemyPrefab: {fileID: 122266, guid: eadd57d4eade9407b9d312856938be9b, type: 2}
   bossEnemyPrefab: {fileID: 136688, guid: bd8532cf789924a98962f70baa7969b7, type: 2}
   speedEnemyPrefab: {fileID: 105528, guid: a237c6880455d4025997f57fc594b25e, type: 2}
-  timeBetweenEnemies: 1
+  timeBetweenEnemies: 5
   timeBetweenWaves: 5
   numberOfWaves: 10
   waveTextLabel: {fileID: 1328054354}
